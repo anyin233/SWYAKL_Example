@@ -1,0 +1,25 @@
+{
+	"revision" : 0,
+	"rules" : 
+	[
+		{
+			"outputs" : [],
+			"primary-output" : "YAKL/CMakeFiles/yakl_fortran_interface.dir/src/YAKL_gator_mod.F90.o",
+			"provides" : 
+			[
+				{
+					"compiled-module-path" : "YAKL/gator_mod.mod",
+					"is-interface" : true,
+					"logical-name" : "gator_mod.mod"
+				}
+			],
+			"requires" : 
+			[
+				{
+					"logical-name" : "iso_c_binding.mod"
+				}
+			]
+		}
+	],
+	"version" : 0
+}

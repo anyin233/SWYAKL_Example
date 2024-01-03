@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/sw/swgcc/swgcc710-tools-SEA-1417/shared_include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/sw/swgcc/swgcc710-tools-SEA-1417/usr/bin/swucxx",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-clang-x64"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,925 @@
+The target system is: Linux -  - sw64
+The host system is: Linux - 3.10.0-862.14.4.el7.sw.x86_64 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/export/online1/mdt00/shisuan/swustc/yyw/swuc-yakl-workflow/porting/tools/swucwrapper 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/export/online1/mdt00/shisuan/swustc/yyw/swuc-yakl-workflow/porting/build/CMakeFiles/3.25.3/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /home/export/online1/mdt00/shisuan/swustc/yyw/swuc-yakl-workflow/porting/tools/swucxxwrapper 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/export/online1/mdt00/shisuan/swustc/yyw/swuc-yakl-workflow/porting/build/CMakeFiles/3.25.3/CompilerIdCXX/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/export/online1/mdt00/shisuan/swustc/yyw/swuc-yakl-workflow/porting/build/CMakeFiles/CMakeScratch/TryCompile-918000
+
+Run Build Command(s):/usr/bin/ninja-build cmTC_09be7 && [1/2] Building C object CMakeFiles/cmTC_09be7.dir/CMakeCCompilerABI.c.o
+Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs
+COLLECT_GCC=swgcc
+Target: sw_64sw6a-sunway-linux-gnu
+Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c,c++,fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror
+Thread model: posix
+gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) 
+COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mhost' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.F0dYZ5.host.o' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/cc1 -quiet -v -iprefix /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/ -isysroot /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 -D_SIMD_HOST -D_SIMD_HOST /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mhybrid-coding -mhost -mieee -mftz -msimd -mcpu=sw6a -auxbase-strip /tmp/swuc.F0dYZ5.host.o -version -mcpu=sw6a -D_SIMD_HOST -D_SIMD_HOST -o /tmp/ccw12wef.s
+GNU C11 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)
+	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39), GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.15-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/local/include"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include
+End of search list.
+GNU C11 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)
+	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39), GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.15-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: c1c9fc8ff07f95b608bd927b987842d7
+COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mhost' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.F0dYZ5.host.o' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/as -v -no-mdebug -msw6a -o /tmp/swuc.F0dYZ5.host.o /tmp/ccw12wef.s
+GNU assembler version 2.24 (sw_64sw6a-sunway-linux-gnu) using BFD version (GNU Binutils) 2.24
+COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/
+LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/
+COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mhost' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.F0dYZ5.host.o' '-mcpu=sw6a'
+Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs
+COLLECT_GCC=swgcc
+Target: sw_64sw6a-sunway-linux-gnu
+Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c,c++,fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror
+Thread model: posix
+gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) 
+COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mslave' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.wgHQPa.slave.o' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/cc1 -quiet -v -iprefix /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/ -isysroot /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 -D_SIMD_SLAVE /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mhybrid-coding -mslave -mieee -mftz -msimd -mcpu=sw6a -auxbase-strip /tmp/swuc.wgHQPa.slave.o -version -mcpu=sw7a -D_SIMD_SLAVE -o /tmp/ccEfX1Kj.s
+GNU C11 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)
+	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39), GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.15-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/local/include"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/include
+End of search list.
+GNU C11 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)
+	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39), GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.15-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: c1c9fc8ff07f95b608bd927b987842d7
+COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mslave' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.wgHQPa.slave.o' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/swas -v -no-mdebug -msw6a -o /tmp/swuc.wgHQPa.slave.o /tmp/ccEfX1Kj.s
+GNU assembler version 2.24 (sw_64sw6a-sunway-linux-gnu) using BFD version (GNU Binutils) 2.24
+ WCH modified !
+COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/
+LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/
+COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mslave' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.wgHQPa.slave.o' '-mcpu=sw6a'
+swobjcopy: '.static_var_list': No such file
+swobjcopy: cannot open '.static_var_list': No such file or directory
+[2/2] Linking C executable cmTC_09be7
+Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs
+COLLECT_GCC=swgcc
+COLLECT_LTO_WRAPPER=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper
+Target: sw_64sw6a-sunway-linux-gnu
+Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c,c++,fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror
+Thread model: posix
+gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) 
+COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/
+LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_09be7' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/collect2 -mcpu=sw6a -plugin /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/liblto_plugin.so -plugin-opt=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNkF8Su.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc --sysroot=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 --eh-frame-hdr -m elf64sw_64 -O1 -dynamic-linker /lib/ld-linux.so.2 -sw-version -o cmTC_09be7 /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0 -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0 -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib CMakeFiles/cmTC_09be7.dir/CMakeCCompilerABI.c.o --start-group -lgcc --as-needed -lgcc_s --no-as-needed -lc --end-group /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_09be7' '-mcpu=sw6a'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [.]
+    add: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include]
+    add: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed]
+    add: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include]
+    add: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include]
+  end of search list found
+  skipping relative include dir [.]
+  collapse include dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include]
+  collapse include dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed]
+  collapse include dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/include]
+  collapse include dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/shared_include]
+  implicit include dirs: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/include;/usr/sw/swgcc/swgcc710-tools-SEA-1402/shared_include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/export/online1/mdt00/shisuan/swustc/yyw/swuc-yakl-workflow/porting/build/CMakeFiles/CMakeScratch/TryCompile-918000]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/ninja-build cmTC_09be7 && [1/2] Building C object CMakeFiles/cmTC_09be7.dir/CMakeCCompilerABI.c.o]
+  ignore line: [Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs]
+  ignore line: [COLLECT_GCC=swgcc]
+  ignore line: [Target: sw_64sw6a-sunway-linux-gnu]
+  ignore line: [Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c c++ fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mhost' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.F0dYZ5.host.o' '-mcpu=sw6a']
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/cc1 -quiet -v -iprefix /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/ -isysroot /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 -D_SIMD_HOST -D_SIMD_HOST /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mhybrid-coding -mhost -mieee -mftz -msimd -mcpu=sw6a -auxbase-strip /tmp/swuc.F0dYZ5.host.o -version -mcpu=sw6a -D_SIMD_HOST -D_SIMD_HOST -o /tmp/ccw12wef.s]
+  ignore line: [GNU C11 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)]
+  ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39)  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.15-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"]
+  ignore line: [ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed"]
+  ignore line: [ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include"]
+  ignore line: [ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ .]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C11 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)]
+  ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39)  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.15-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: c1c9fc8ff07f95b608bd927b987842d7]
+  ignore line: [COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mhost' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.F0dYZ5.host.o' '-mcpu=sw6a']
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/as -v -no-mdebug -msw6a -o /tmp/swuc.F0dYZ5.host.o /tmp/ccw12wef.s]
+  ignore line: [GNU assembler version 2.24 (sw_64sw6a-sunway-linux-gnu) using BFD version (GNU Binutils) 2.24]
+  ignore line: [COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/]
+  ignore line: [LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mhost' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.F0dYZ5.host.o' '-mcpu=sw6a']
+  ignore line: [Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs]
+  ignore line: [COLLECT_GCC=swgcc]
+  ignore line: [Target: sw_64sw6a-sunway-linux-gnu]
+  ignore line: [Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c c++ fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mslave' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.wgHQPa.slave.o' '-mcpu=sw6a']
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/cc1 -quiet -v -iprefix /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/ -isysroot /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 -D_SIMD_SLAVE /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mhybrid-coding -mslave -mieee -mftz -msimd -mcpu=sw6a -auxbase-strip /tmp/swuc.wgHQPa.slave.o -version -mcpu=sw7a -D_SIMD_SLAVE -o /tmp/ccEfX1Kj.s]
+  ignore line: [GNU C11 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)]
+  ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39)  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.15-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/local/include"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ .]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C11 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)]
+  ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39)  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.15-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: c1c9fc8ff07f95b608bd927b987842d7]
+  ignore line: [COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mslave' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.wgHQPa.slave.o' '-mcpu=sw6a']
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/swas -v -no-mdebug -msw6a -o /tmp/swuc.wgHQPa.slave.o /tmp/ccEfX1Kj.s]
+  ignore line: [GNU assembler version 2.24 (sw_64sw6a-sunway-linux-gnu) using BFD version (GNU Binutils) 2.24]
+  ignore line: [ WCH modified !]
+  ignore line: [COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/]
+  ignore line: [LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mslave' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.wgHQPa.slave.o' '-mcpu=sw6a']
+  ignore line: [swobjcopy: '.static_var_list': No such file]
+  ignore line: [swobjcopy: cannot open '.static_var_list': No such file or directory]
+  ignore line: [[2/2] Linking C executable cmTC_09be7]
+  ignore line: [Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs]
+  ignore line: [COLLECT_GCC=swgcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper]
+  ignore line: [Target: sw_64sw6a-sunway-linux-gnu]
+  ignore line: [Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c c++ fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/]
+  ignore line: [LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_09be7' '-mcpu=sw6a']
+  link line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/collect2 -mcpu=sw6a -plugin /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/liblto_plugin.so -plugin-opt=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNkF8Su.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc --sysroot=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 --eh-frame-hdr -m elf64sw_64 -O1 -dynamic-linker /lib/ld-linux.so.2 -sw-version -o cmTC_09be7 /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0 -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0 -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib CMakeFiles/cmTC_09be7.dir/CMakeCCompilerABI.c.o --start-group -lgcc --as-needed -lgcc_s --no-as-needed -lc --end-group /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o]
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/collect2] ==> ignore
+    arg [-mcpu=sw6a] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccNkF8Su.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [--sysroot=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf64sw_64] ==> ignore
+    arg [-O1] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.2] ==> ignore
+    arg [-sw-version] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_09be7] ==> ignore
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o] ==> obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o]
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o] ==> obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o]
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o] ==> obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib]
+    arg [CMakeFiles/cmTC_09be7.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [--start-group] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [--end-group] ==> ignore
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o] ==> obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o]
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o] ==> obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o]
+  collapse obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crt1.o]
+  collapse obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crti.o]
+  collapse obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o]
+  collapse obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o]
+  collapse obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crtn.o]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/lib]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/lib]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/lib]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib]
+  implicit libs: [gcc;gcc_s;c]
+  implicit objs: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crt1.o;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crti.o;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crtn.o]
+  implicit dirs: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/lib;/usr/sw/swgcc/swgcc710-tools-SEA-1402/lib;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/lib;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/export/online1/mdt00/shisuan/swustc/yyw/swuc-yakl-workflow/porting/build/CMakeFiles/CMakeScratch/TryCompile-oK8VrO
+
+Run Build Command(s):/usr/bin/ninja-build cmTC_e1c81 && [1/2] Building CXX object CMakeFiles/cmTC_e1c81.dir/CMakeCXXCompilerABI.cpp.o
+Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs
+COLLECT_GCC=swg++
+Target: sw_64sw6a-sunway-linux-gnu
+Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c,c++,fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror
+Thread model: posix
+gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) 
+COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mhost' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.vUlEdg.host.o' '-shared-libgcc' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/cc1plus -quiet -v -iprefix /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/ -isysroot /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mhybrid-coding -mhost -mieee -mftz -msimd -mcpu=sw6a -auxbase-strip /tmp/swuc.vUlEdg.host.o -version -mcpu=sw6a -D_SIMD_HOST -D_SIMD_HOST -o /tmp/cczSc2ej.s
+GNU C++14 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)
+	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39), GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.15-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/sw_64sw6a-sunway-linux-gnu"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/backward"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/local/include"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/sw_64sw6a-sunway-linux-gnu
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/backward
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include
+End of search list.
+GNU C++14 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)
+	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39), GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.15-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 50670599f56aee48429b315b03ea72c6
+COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mhost' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.vUlEdg.host.o' '-shared-libgcc' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/as -v -no-mdebug -msw6a -o /tmp/swuc.vUlEdg.host.o /tmp/cczSc2ej.s
+GNU assembler version 2.24 (sw_64sw6a-sunway-linux-gnu) using BFD version (GNU Binutils) 2.24
+COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/
+LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/
+COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mhost' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.vUlEdg.host.o' '-shared-libgcc' '-mcpu=sw6a'
+Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs
+COLLECT_GCC=swg++
+Target: sw_64sw6a-sunway-linux-gnu
+Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c,c++,fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror
+Thread model: posix
+gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) 
+COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mslave' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.d84eTq.slave.o' '-shared-libgcc' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/cc1plus -quiet -v -iprefix /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/ -isysroot /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mhybrid-coding -mslave -mieee -mftz -msimd -mcpu=sw6a -auxbase-strip /tmp/swuc.d84eTq.slave.o -version -mcpu=sw7a -D_SIMD_SLAVE -o /tmp/ccLrza4m.s
+GNU C++14 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)
+	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39), GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.15-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/sw_64sw6a-sunway-linux-gnu"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/backward"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/local/include"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/sw_64sw6a-sunway-linux-gnu
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/backward
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/include
+End of search list.
+GNU C++14 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)
+	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39), GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.15-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 50670599f56aee48429b315b03ea72c6
+COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mslave' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.d84eTq.slave.o' '-shared-libgcc' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/swas -v -no-mdebug -msw6a -o /tmp/swuc.d84eTq.slave.o /tmp/ccLrza4m.s
+GNU assembler version 2.24 (sw_64sw6a-sunway-linux-gnu) using BFD version (GNU Binutils) 2.24
+ WCH modified !
+COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/
+LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/
+COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mslave' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.d84eTq.slave.o' '-shared-libgcc' '-mcpu=sw6a'
+[2/2] Linking CXX executable cmTC_e1c81
+Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs
+COLLECT_GCC=swg++
+COLLECT_LTO_WRAPPER=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper
+Target: sw_64sw6a-sunway-linux-gnu
+Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c,c++,fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror
+Thread model: posix
+gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) 
+COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/
+LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e1c81' '-shared-libgcc' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/collect2 -mcpu=sw6a -plugin /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/liblto_plugin.so -plugin-opt=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbq25fu.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 --eh-frame-hdr -m elf64sw_64 -O1 -dynamic-linker /lib/ld-linux.so.2 -sw-version -o cmTC_e1c81 /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0 -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0 -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib CMakeFiles/cmTC_e1c81.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm --start-group -lgcc_s -lgcc -lc --end-group /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e1c81' '-shared-libgcc' '-mcpu=sw6a'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [.]
+    add: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0]
+    add: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/sw_64sw6a-sunway-linux-gnu]
+    add: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/backward]
+    add: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include]
+    add: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed]
+    add: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include]
+    add: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include]
+  end of search list found
+  skipping relative include dir [.]
+  collapse include dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0]
+  collapse include dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/sw_64sw6a-sunway-linux-gnu] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/sw_64sw6a-sunway-linux-gnu]
+  collapse include dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/backward] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/backward]
+  collapse include dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include]
+  collapse include dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed]
+  collapse include dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/include]
+  collapse include dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/shared_include]
+  implicit include dirs: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/sw_64sw6a-sunway-linux-gnu;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/backward;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/include;/usr/sw/swgcc/swgcc710-tools-SEA-1402/shared_include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/export/online1/mdt00/shisuan/swustc/yyw/swuc-yakl-workflow/porting/build/CMakeFiles/CMakeScratch/TryCompile-oK8VrO]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/ninja-build cmTC_e1c81 && [1/2] Building CXX object CMakeFiles/cmTC_e1c81.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs]
+  ignore line: [COLLECT_GCC=swg++]
+  ignore line: [Target: sw_64sw6a-sunway-linux-gnu]
+  ignore line: [Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c c++ fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mhost' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.vUlEdg.host.o' '-shared-libgcc' '-mcpu=sw6a']
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/cc1plus -quiet -v -iprefix /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/ -isysroot /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mhybrid-coding -mhost -mieee -mftz -msimd -mcpu=sw6a -auxbase-strip /tmp/swuc.vUlEdg.host.o -version -mcpu=sw6a -D_SIMD_HOST -D_SIMD_HOST -o /tmp/cczSc2ej.s]
+  ignore line: [GNU C++14 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)]
+  ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39)  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.15-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"]
+  ignore line: [ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0"]
+  ignore line: [ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/sw_64sw6a-sunway-linux-gnu"]
+  ignore line: [ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/backward"]
+  ignore line: [ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed"]
+  ignore line: [ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include"]
+  ignore line: [ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ .]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/sw_64sw6a-sunway-linux-gnu]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/backward]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)]
+  ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39)  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.15-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 50670599f56aee48429b315b03ea72c6]
+  ignore line: [COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mhost' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.vUlEdg.host.o' '-shared-libgcc' '-mcpu=sw6a']
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/as -v -no-mdebug -msw6a -o /tmp/swuc.vUlEdg.host.o /tmp/cczSc2ej.s]
+  ignore line: [GNU assembler version 2.24 (sw_64sw6a-sunway-linux-gnu) using BFD version (GNU Binutils) 2.24]
+  ignore line: [COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/]
+  ignore line: [LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mhost' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.vUlEdg.host.o' '-shared-libgcc' '-mcpu=sw6a']
+  ignore line: [Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs]
+  ignore line: [COLLECT_GCC=swg++]
+  ignore line: [Target: sw_64sw6a-sunway-linux-gnu]
+  ignore line: [Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c c++ fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mslave' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.d84eTq.slave.o' '-shared-libgcc' '-mcpu=sw6a']
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/cc1plus -quiet -v -iprefix /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/ -isysroot /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mhybrid-coding -mslave -mieee -mftz -msimd -mcpu=sw6a -auxbase-strip /tmp/swuc.d84eTq.slave.o -version -mcpu=sw7a -D_SIMD_SLAVE -o /tmp/ccLrza4m.s]
+  ignore line: [GNU C++14 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)]
+  ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39)  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.15-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/sw_64sw6a-sunway-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/backward"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/local/include"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ .]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/sw_64sw6a-sunway-linux-gnu]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include/c++/7.1.0/backward]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)]
+  ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39)  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.15-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 50670599f56aee48429b315b03ea72c6]
+  ignore line: [COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mslave' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.d84eTq.slave.o' '-shared-libgcc' '-mcpu=sw6a']
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/swas -v -no-mdebug -msw6a -o /tmp/swuc.d84eTq.slave.o /tmp/ccLrza4m.s]
+  ignore line: [GNU assembler version 2.24 (sw_64sw6a-sunway-linux-gnu) using BFD version (GNU Binutils) 2.24]
+  ignore line: [ WCH modified !]
+  ignore line: [COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/]
+  ignore line: [LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mhybrid-coding' '-mslave' '-v' '-mieee' '-mftz' '-msimd' '-c' '-o' '/tmp/swuc.d84eTq.slave.o' '-shared-libgcc' '-mcpu=sw6a']
+  ignore line: [[2/2] Linking CXX executable cmTC_e1c81]
+  ignore line: [Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs]
+  ignore line: [COLLECT_GCC=swg++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper]
+  ignore line: [Target: sw_64sw6a-sunway-linux-gnu]
+  ignore line: [Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c c++ fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/]
+  ignore line: [LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e1c81' '-shared-libgcc' '-mcpu=sw6a']
+  link line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/collect2 -mcpu=sw6a -plugin /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/liblto_plugin.so -plugin-opt=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbq25fu.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 --eh-frame-hdr -m elf64sw_64 -O1 -dynamic-linker /lib/ld-linux.so.2 -sw-version -o cmTC_e1c81 /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0 -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0 -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib CMakeFiles/cmTC_e1c81.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm --start-group -lgcc_s -lgcc -lc --end-group /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o]
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/collect2] ==> ignore
+    arg [-mcpu=sw6a] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccbq25fu.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [--sysroot=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf64sw_64] ==> ignore
+    arg [-O1] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.2] ==> ignore
+    arg [-sw-version] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_e1c81] ==> ignore
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o] ==> obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o]
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o] ==> obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o]
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o] ==> obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib]
+    arg [CMakeFiles/cmTC_e1c81.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [--start-group] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [--end-group] ==> ignore
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o] ==> obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o]
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o] ==> obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o]
+  collapse obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crt1.o]
+  collapse obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crti.o]
+  collapse obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o]
+  collapse obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o]
+  collapse obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crtn.o]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/lib]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/lib]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/lib]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c]
+  implicit objs: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crt1.o;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crti.o;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crtn.o]
+  implicit dirs: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/lib;/usr/sw/swgcc/swgcc710-tools-SEA-1402/lib;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/lib;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib]
+  implicit fwks: []
+
+
+Compiling the Fortran compiler identification source file "CMakeFortranCompilerId.F" succeeded.
+Compiler: /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/swgfortran 
+Build flags: 
+Id flags: -v 
+
+The output was:
+0
+Driving: /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/swgfortran -v CMakeFortranCompilerId.F -l gfortran -l m -shared-libgcc
+Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs
+COLLECT_GCC=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/swgfortran
+COLLECT_LTO_WRAPPER=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper
+Target: sw_64sw6a-sunway-linux-gnu
+Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c,c++,fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror
+Thread model: posix
+gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-shared-libgcc' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/f951 CMakeFortranCompilerId.F -ffixed-form -cpp=/tmp/cc3HHTq2.f90 -quiet -v -iprefix /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/ -isysroot /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 -D_SIMD_HOST CMakeFortranCompilerId.F -quiet -dumpbase CMakeFortranCompilerId.F -mcpu=sw6a -auxbase CMakeFortranCompilerId -version -D_SIMD_HOST -fintrinsic-modules-path /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/finclude -o /tmp/ccTvRP0R.s
+GNU Fortran (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)
+	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39), GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.15-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/local/include"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/finclude
+ .
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include
+End of search list.
+GNU Fortran2008 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)
+	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39), GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.15-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+COLLECT_GCC_OPTIONS='-v' '-shared-libgcc' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/as -v -no-mdebug -msw6a -o /tmp/ccrrxu9H.o /tmp/ccTvRP0R.s
+GNU assembler version 2.24 (sw_64sw6a-sunway-linux-gnu) using BFD version (GNU Binutils) 2.24
+Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/libgfortran.spec
+rename spec lib to liborig
+COLLECT_GCC_OPTIONS='-v' '-shared-libgcc' '-mcpu=sw6a'
+COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/
+LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/
+COLLECT_GCC_OPTIONS='-v' '-shared-libgcc' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/collect2 -mcpu=sw6a -plugin /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/liblto_plugin.so -plugin-opt=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7fPKjy.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 --eh-frame-hdr -m elf64sw_64 -O1 -dynamic-linker /lib/ld-linux.so.2 -sw-version /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0 -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0 -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib /tmp/ccrrxu9H.o -lgfortran -lm --start-group -lgcc_s -lgcc -lm -lgcc_s -lgcc -lc --end-group /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-shared-libgcc' '-mcpu=sw6a'
+
+
+Compilation of the Fortran compiler identification source "CMakeFortranCompilerId.F" produced "a.out"
+
+The Fortran compiler identification is GNU, found in "/home/export/online1/mdt00/shisuan/swustc/yyw/swuc-yakl-workflow/porting/build/CMakeFiles/3.25.3/CompilerIdFortran/a.out"
+
+Detecting Fortran compiler ABI info compiled with the following output:
+Change Dir: /home/export/online1/mdt00/shisuan/swustc/yyw/swuc-yakl-workflow/porting/build/CMakeFiles/CMakeScratch/TryCompile-BiPFpF
+
+Run Build Command(s):/usr/bin/ninja-build cmTC_a0ced && [1/4] Building Fortran preprocessed CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90-pp.f90
+Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs
+COLLECT_GCC=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/swgfortran
+Target: sw_64sw6a-sunway-linux-gnu
+Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c,c++,fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror
+Thread model: posix
+gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) 
+COLLECT_GCC_OPTIONS='-cpp' '-v' '-mhybrid-coding' '-mieee' '-mftz' '-msimd' '-E' '-o' 'CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90-pp.f90' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/f951 /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules/CMakeFortranCompilerABI.F90 -cpp=/tmp/ccHkj55Q.f90 -E -quiet -v -iprefix /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/ -isysroot /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 -D_SIMD_HOST /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules/CMakeFortranCompilerABI.F90 -o CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90-pp.f90 -mhybrid-coding -mieee -mftz -msimd -mcpu=sw6a -fsyntax-only
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"
+ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include"
+ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/local/include"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include"
+ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include
+End of search list.
+COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/
+LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/
+COLLECT_GCC_OPTIONS='-cpp' '-v' '-mhybrid-coding' '-mieee' '-mftz' '-msimd' '-E' '-o' 'CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90-pp.f90' '-mcpu=sw6a'
+[2/4] Generating Fortran dyndep file CMakeFiles/cmTC_a0ced.dir/Fortran.dd
+[3/4] Building Fortran object CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o
+Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs
+COLLECT_GCC=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/swgfortran
+Target: sw_64sw6a-sunway-linux-gnu
+Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c,c++,fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror
+Thread model: posix
+gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) 
+COLLECT_GCC_OPTIONS='-I' '/home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules' '-v' '-mhybrid-coding' '-mieee' '-mftz' '-msimd' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/f951 CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90-pp.f90 -I /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules -quiet -dumpbase CMakeFortranCompilerABI.F90-pp.f90 -mhybrid-coding -mieee -mftz -msimd -mcpu=sw6a -auxbase-strip CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o -version -fpreprocessed -D_SIMD_HOST -fintrinsic-modules-path /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/finclude -o /tmp/cc1vUpkW.s
+GNU Fortran (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)
+	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39), GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.15-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+GNU Fortran2008 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)
+	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39), GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.15-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+COLLECT_GCC_OPTIONS='-I' '/home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules' '-v' '-mhybrid-coding' '-mieee' '-mftz' '-msimd' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/as -v -I /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules -no-mdebug -msw6a -o CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o /tmp/cc1vUpkW.s
+GNU assembler version 2.24 (sw_64sw6a-sunway-linux-gnu) using BFD version (GNU Binutils) 2.24
+COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/
+LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/
+COLLECT_GCC_OPTIONS='-I' '/home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules' '-v' '-mhybrid-coding' '-mieee' '-mftz' '-msimd' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o' '-mcpu=sw6a'
+[4/4] Linking Fortran executable cmTC_a0ced
+Driving: /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/swgfortran -v CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o -o cmTC_a0ced -l gfortran -l m -shared-libgcc
+Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs
+COLLECT_GCC=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/swgfortran
+COLLECT_LTO_WRAPPER=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper
+Target: sw_64sw6a-sunway-linux-gnu
+Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c,c++,fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror
+Thread model: posix
+gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) 
+Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/libgfortran.spec
+rename spec lib to liborig
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a0ced' '-shared-libgcc' '-mcpu=sw6a'
+COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/
+LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a0ced' '-shared-libgcc' '-mcpu=sw6a'
+ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/collect2 -mcpu=sw6a -plugin /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/liblto_plugin.so -plugin-opt=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXmcQa4.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 --eh-frame-hdr -m elf64sw_64 -O1 -dynamic-linker /lib/ld-linux.so.2 -sw-version -o cmTC_a0ced /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0 -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0 -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o -lgfortran -lm --start-group -lgcc_s -lgcc -lm -lgcc_s -lgcc -lc --end-group /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a0ced' '-shared-libgcc' '-mcpu=sw6a'
+
+
+
+Parsed Fortran implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [.]
+    add: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include]
+    add: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed]
+    add: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include]
+    add: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include]
+  end of search list found
+  skipping relative include dir [.]
+  collapse include dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include]
+  collapse include dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed]
+  collapse include dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/include]
+  collapse include dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/shared_include]
+  implicit include dirs: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/include;/usr/sw/swgcc/swgcc710-tools-SEA-1402/shared_include]
+
+
+Parsed Fortran implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/export/online1/mdt00/shisuan/swustc/yyw/swuc-yakl-workflow/porting/build/CMakeFiles/CMakeScratch/TryCompile-BiPFpF]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/ninja-build cmTC_a0ced && [1/4] Building Fortran preprocessed CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90-pp.f90]
+  ignore line: [Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs]
+  ignore line: [COLLECT_GCC=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/swgfortran]
+  ignore line: [Target: sw_64sw6a-sunway-linux-gnu]
+  ignore line: [Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c c++ fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-cpp' '-v' '-mhybrid-coding' '-mieee' '-mftz' '-msimd' '-E' '-o' 'CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90-pp.f90' '-mcpu=sw6a']
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/f951 /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules/CMakeFortranCompilerABI.F90 -cpp=/tmp/ccHkj55Q.f90 -E -quiet -v -iprefix /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/ -isysroot /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 -D_SIMD_HOST /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules/CMakeFortranCompilerABI.F90 -o CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90-pp.f90 -mhybrid-coding -mieee -mftz -msimd -mcpu=sw6a -fsyntax-only]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/protobufxxx-3.9.2/include"]
+  ignore line: [ignoring nonexistent directory "/home/export/online1/mdt00/shisuan/swustc/zhuxianyu/tfenv/tensorflow-2.5.0-bazel-bin-master"]
+  ignore line: [ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include"]
+  ignore line: [ignoring nonexistent directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed"]
+  ignore line: [ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/../../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include"]
+  ignore line: [ignoring duplicate directory "/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ .]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/include-fixed]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/include]
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/shared_include]
+  ignore line: [End of search list.]
+  ignore line: [COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/]
+  ignore line: [LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-cpp' '-v' '-mhybrid-coding' '-mieee' '-mftz' '-msimd' '-E' '-o' 'CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90-pp.f90' '-mcpu=sw6a']
+  ignore line: [[2/4] Generating Fortran dyndep file CMakeFiles/cmTC_a0ced.dir/Fortran.dd]
+  ignore line: [[3/4] Building Fortran object CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o]
+  ignore line: [Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs]
+  ignore line: [COLLECT_GCC=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/swgfortran]
+  ignore line: [Target: sw_64sw6a-sunway-linux-gnu]
+  ignore line: [Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c c++ fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-I' '/home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules' '-v' '-mhybrid-coding' '-mieee' '-mftz' '-msimd' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o' '-mcpu=sw6a']
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/f951 CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90-pp.f90 -I /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules -quiet -dumpbase CMakeFortranCompilerABI.F90-pp.f90 -mhybrid-coding -mieee -mftz -msimd -mcpu=sw6a -auxbase-strip CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o -version -fpreprocessed -D_SIMD_HOST -fintrinsic-modules-path /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/finclude -o /tmp/cc1vUpkW.s]
+  ignore line: [GNU Fortran (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)]
+  ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39)  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.15-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [GNU Fortran2008 (GCC) version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (sw_64sw6a-sunway-linux-gnu)]
+  ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-39)  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.15-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [COLLECT_GCC_OPTIONS='-I' '/home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules' '-v' '-mhybrid-coding' '-mieee' '-mftz' '-msimd' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o' '-mcpu=sw6a']
+  ignore line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/as -v -I /home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules -no-mdebug -msw6a -o CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o /tmp/cc1vUpkW.s]
+  ignore line: [GNU assembler version 2.24 (sw_64sw6a-sunway-linux-gnu) using BFD version (GNU Binutils) 2.24]
+  ignore line: [COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/]
+  ignore line: [LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-I' '/home/export/online1/mdt00/shisuan/swustc/.local/share/cmake-3.25/Modules' '-v' '-mhybrid-coding' '-mieee' '-mftz' '-msimd' '-fpreprocessed' '-c' '-o' 'CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o' '-mcpu=sw6a']
+  ignore line: [[4/4] Linking Fortran executable cmTC_a0ced]
+  ignore line: [Driving: /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/swgfortran -v CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o -o cmTC_a0ced -l gfortran -l m -shared-libgcc]
+  ignore line: [Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/specs]
+  ignore line: [COLLECT_GCC=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/swgfortran]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper]
+  ignore line: [Target: sw_64sw6a-sunway-linux-gnu]
+  ignore line: [Configured with: /home/qh9/swgcc710/gcc-7.1.0/configure --prefix=/home/qh9/swgcc710-tools-SEA-1402/usr --with-gmp=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-mpfr=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --with-isl=/home/qh9/swgcc710-tools-SEA-1402/usr/lib_for_gcc --enable-shared --enable-languages=c c++ fortran --build=x86_64-redhat-linux --host=x86_64-redhat-linux --target=sw_64sw6a-sunway-linux-gnu --disable-multilib --enable-c99 --enable-long-long --enable-threads=posix --enable-__cxa_atexit --disable-nls --disable-libgcc_slave --disable-libgfortran_slave --disable-libstdcxx_slave --with-sysroot=/home/qh9/swgcc710-tools-SEA-1402 CFLAGS='-g -gdwarf-2' CXXFLAGS='-g -gdwarf-2 -fpermissive' --disable-werror]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.1.0 20170502 (swgcc-1402 Committer: qianh <qianh@example.com> by qh9 at localhost.localdomain on Fri Apr 21 15:16:22 CST 2023) (GCC) ]
+  ignore line: [Reading specs from /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/libgfortran.spec]
+  ignore line: [rename spec lib to liborig]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a0ced' '-shared-libgcc' '-mcpu=sw6a']
+  ignore line: [COMPILER_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/bin/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/../../usr_sw/bin/]
+  ignore line: [LIBRARY_PATH=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/:/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a0ced' '-shared-libgcc' '-mcpu=sw6a']
+  link line: [ /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/collect2 -mcpu=sw6a -plugin /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/liblto_plugin.so -plugin-opt=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXmcQa4.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402 --eh-frame-hdr -m elf64sw_64 -O1 -dynamic-linker /lib/ld-linux.so.2 -sw-version -o cmTC_a0ced /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0 -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0 -L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o -lgfortran -lm --start-group -lgcc_s -lgcc -lm -lgcc_s -lgcc -lc --end-group /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o /usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o]
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/collect2] ==> ignore
+    arg [-mcpu=sw6a] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../libexec/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccXmcQa4.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lm] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [--sysroot=/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf64sw_64] ==> ignore
+    arg [-O1] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.2] ==> ignore
+    arg [-sw-version] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_a0ced] ==> ignore
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o] ==> obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o]
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o] ==> obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o]
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o] ==> obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0]
+    arg [-L/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib] ==> dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib]
+    arg [CMakeFiles/cmTC_a0ced.dir/CMakeFortranCompilerABI.F90.o] ==> ignore
+    arg [-lgfortran] ==> lib [gfortran]
+    arg [-lm] ==> lib [m]
+    arg [--start-group] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [--end-group] ==> ignore
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o] ==> obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o]
+    arg [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o] ==> obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o]
+  collapse obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crt1.o] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crt1.o]
+  collapse obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crti.o] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crti.o]
+  collapse obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o]
+  collapse obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o]
+  collapse obj [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib/crtn.o] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crtn.o]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/../../../../sw_64sw6a-sunway-linux-gnu/lib] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/lib]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/lib] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/lib]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr/lib] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/lib]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0]
+  collapse library dir [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/bin/../../../swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib] ==> [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib]
+  implicit libs: [gfortran;m;gcc_s;gcc;m;gcc_s;gcc;c]
+  implicit objs: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crt1.o;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crti.o;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtbegin.o;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0/crtend.o;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/crtn.o]
+  implicit dirs: [/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib/gcc;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/sw_64sw6a-sunway-linux-gnu/lib;/usr/sw/swgcc/swgcc710-tools-SEA-1402/lib;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr/lib;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/lib;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/lib/gcc/sw_64sw6a-sunway-linux-gnu/7.1.0;/usr/sw/swgcc/swgcc710-tools-SEA-1402/usr_sw/sw_64sw6a-sunway-linux-gnu/lib]
+  implicit fwks: []
+
+

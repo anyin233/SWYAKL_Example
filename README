@@ -1,0 +1,14 @@
+This directory is created for test YAKL port
+Please follow this structure
+
+Porting
+| -- CMakeLists.txt
+| -- README
+| -- YAKL
+     | -- CMakeLists.txt
+     | -- src (YAKL's implementation is here)
+     | -- external
+     | -- unit
+     | -- ...
+| -- src (Test stores here)
+     | -- CMakeLists.txt

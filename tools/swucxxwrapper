@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# enable swuc compiler
+# source /usr/sw/swgcc/setenv-release-SEA-1417
+# source /usr/sw/swgcc/setenv-release-SEA-swuc
+source /usr/sw/swgcc/setenv-release-SEA-swuc-1402
+source /usr/sw/mpi/setenv-mpi-swuc
+
+USE_SWUC=0
+ARGS=()
+
+while [ $# -gt 0 ]; do
+    if [ $1 == -mhybrid-coding ]; then
+        USE_SWUC=1
+    elif [ $1 == -mhybrid ]; then
+        USE_SWUC=0
+    fi
+    ARGS+=("$1")
+    shift
+done
+
+# USE_SWUC=0 # force to use swg++
+
+if [ $USE_SWUC -ne 0 ]; then
+    swucxx "${ARGS[@]}"
+else
+    swg++  "${ARGS[@]}"
+fi
