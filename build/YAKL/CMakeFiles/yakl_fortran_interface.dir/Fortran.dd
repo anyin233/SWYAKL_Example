@@ -1,4 +1,0 @@
-ninja_dyndep_version = 1.0
-build YAKL/CMakeFiles/yakl_fortran_interface.dir/src/YAKL_gator_mod.F90.o | YAKL/gator_mod.mod: dyndep
-  restat = 1
-
