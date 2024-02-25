@@ -7,8 +7,9 @@
 #include <iomanip>
 #include <istream>
 
-const size_t N = 1 << 30;
+const size_t N = 1 << 12;
 using C1Array = yakl::Array<int, 1, yakl::memHost, yakl::styleC>;
+using C2Array = yakl::Array<int, 2, yakl::memHost, yakl::styleC>;
 
 class MulFunctor {
   C1Array &a, &b, &c;
@@ -42,7 +43,7 @@ public:
 void print_size_of_Internal() {
   std::cout << "\n\nIn current environment\n"
             << "size_t = " << sizeof(size_t) << " int = " << sizeof(int) << " long = " << sizeof(long) << std::endl
-            << "fake_std::mutex = " << sizeof(yakl::fake_std::mutex) << " fake_std::lock_guard = " << sizeof(yakl::fake_std::lock_guard<yakl::fake_std::mutex>) << std::endl;
+            << "fake_std::mutex = " << sizeof(yakl::yakl_std_wrapper::mutex) << " fake_std::lock_guard = " << sizeof(yakl::yakl_std_wrapper::lock_guard<yakl::yakl_std_wrapper::mutex>) << std::endl;
   std::cout << "Sizeof YAKL_Instance\t" << sizeof(yakl::get_yakl_instance()) << std::endl;
   std::cout 
        << "Sizeof YAKL_Instance::pool           " << sizeof(yakl::get_yakl_instance().pool) << std::endl
@@ -87,6 +88,8 @@ int main() {
     c(i) = 0;
   });
 
+  std::cout << "Initialize finished\n";
+
   MulFunctor functor(a, b, c);
 
   auto start = std::chrono::system_clock::now();
@@ -94,29 +97,95 @@ int main() {
     c(i) = a(i) * b(i);
   }
   auto end = std::chrono::system_clock::now();
-  auto elapesd_CPE = std::chrono::duration<double>(end - start);
-
- 
+  auto elapesd_MPE = std::chrono::duration<double>(end - start);
+  std::cout << "Serial Version Finished\n";
   // printf("Kernel Finished\n");
-  std::cout << "Kernel Finished\n";
 
   start = std::chrono::system_clock::now();
-  
   yakl::c::parallel_for("Compute", yakl::c::Bounds<1>(N), YAKL_LAMBDA(int i) {
     c(i) = a(i) * b(i);
   });
   end = std::chrono::system_clock::now();
-  auto elapesd_MPE = std::chrono::duration<double>(end - start);
+  auto elapesd_CPE = std::chrono::duration<double>(end - start);
 
+  std::cout << "LAMBDA Kernel Finished\n";
+
+  start = std::chrono::system_clock::now();
   yakl::c::parallel_for("Compute_class", yakl::c::Bounds<1>(N), functor);
-  // for (int i = 0; i < N; i ++) {
-  //   if (c(i) != a(i) * b(i)) {
-  //     printf("Error on index %ld\n", i);
-  //     break;
-  //   }
-  // }
-  // printf("CPE version costs %lf\nMPE version costs %lf\n", elapesd_CPE.count(), elapesd_MPE.count());
+  end = std::chrono::system_clock::now();
+  auto elapsed_CPE_Functor = std::chrono::duration<double>(end - start);
+
+  std::cout << "Class Kernel Finished\n";
+
+  C2Array aa("aa", N, N), bb("bb", N, N), cc("cc", N, N);
+  yakl::c::parallel_outer("Compute Hierarchical", yakl::c::Bounds<1>(N), YAKL_LAMBDA(int i, yakl::InnerHandler handler) {
+    yakl::c::parallel_inner(N, [&] (int j) {
+      aa(i, j) = i * N + j;
+      bb(i, j) = j * N + j;
+      cc(i, j) = 0;
+    }, handler);
+  }, yakl::LaunchConfig<N>());
+
+  start = std::chrono::system_clock::now();
+  std::cout << "Hierarical Kernel Finished\n";
+  for (int i = 0; i < N; i ++) {
+    for (int j = 0; j < N; j ++) {
+      cc(i ,j) = aa(i, j) * bb(i, j);
+    }
+  }
+  end = std::chrono::system_clock::now();
+  auto elapsed_2D = std::chrono::duration<double>(end - start);
+
+  start = std::chrono::system_clock::now();
+  yakl::c::parallel_for("Compute 2D", yakl::c::Bounds<2>(N, N), YAKL_LAMBDA(int i, int j) {
+    cc(i, j) = aa(i, j) * bb(i, j);
+  });
+  end = std::chrono::system_clock::now();
+  auto elapsed_2D_CPE = std::chrono::duration<double>(end - start);
+
+  start = std::chrono::system_clock::now();
+  yakl::c::parallel_outer("Compute Hierarchical", yakl::c::Bounds<1>(N), YAKL_LAMBDA(int i, yakl::InnerHandler handler) {
+    yakl::c::parallel_inner(N, [&] (int j) {
+      cc(i, j) = aa(i, j) * bb(i, j);
+    }, handler);
+  }, yakl::LaunchConfig<N>());
+  end = std::chrono::system_clock::now();
+  auto elapsed_2D_CPE_Hier = std::chrono::duration<double>(end - start);
+
+  start = std::chrono::system_clock::now();
+  yakl::c::parallel_outer("Compute Hierarchical with LDM", yakl::c::Bounds<1>(N), YAKL_LAMBDA(int i, yakl::InnerHandler handler) {
+    int *cc_ldm, *aa_ldm, *bb_ldm;
+    aa_ldm = handler.alloc_ldm<int>(N);
+    bb_ldm = handler.alloc_ldm<int>(N);
+    cc_ldm = handler.alloc_ldm<int>(N);
+    unsigned send_reply;
+    CRTS_dma_iget(aa_ldm, &aa(i, 0), N * sizeof(int), &send_reply);
+    CRTS_dma_iget(bb_ldm, &bb(i, 0), N * sizeof(int), &send_reply);
+    CRTS_dma_wait_value(&send_reply, 2);
+    yakl::c::parallel_inner(N, [&] (int j) {
+      cc_ldm[j] = aa_ldm[j] * bb_ldm[j];
+    }, handler);
+    CRTS_dma_put(&cc(i, 0), cc_ldm, N * sizeof(int));
+  }, yakl::LaunchConfig<N>());
+  end = std::chrono::system_clock::now();
+
+  auto elapsed_2D_CPE_Hier_LDM = std::chrono::duration<double>(end - start);
+
   std::cout << "CPE version costs " << elapesd_CPE.count() << "\nMPE version costs " << elapesd_MPE.count() << std::endl;
+  std::cout << "CPE Functor version costs " << elapsed_CPE_Functor.count() << std::endl; 
+  std::cout << "2D MPE version costs " << elapsed_2D.count() << std::endl;
+  std::cout << "2D CPE version costs " << elapsed_2D_CPE.count() << std::endl;
+  std::cout << "2D Hierarchical version costs " << elapsed_2D_CPE_Hier.count() << std::endl;
+  std::cout << "2D Hierarchical LDM version costs " << elapsed_2D_CPE_Hier_LDM.count() << std::endl;
+
+  for (int i = 0; i < N; i ++) {
+    for (int j = 0; j < N; j ++ ) {
+      if (cc(i, j) != aa(i, j) * bb(i, j)){
+        std::cout << "2D Hierarchical is wrong\n";
+        exit(1);
+      }
+    }
+  }
 }
 
   yakl::finalize();

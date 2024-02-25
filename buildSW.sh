@@ -24,10 +24,13 @@ source /usr/sw/mpi/setenv-mpi-swuc
 #    -DCMAKE_TOOLCHAIN_FILE=${PROJECT_ROOT}/cmake/Platform/Toolchain-Sunway.cmake
 
 # Sunway-Debug
-cmake -G Ninja -S${PROJECT_ROOT} -B${PROJECT_ROOT}/build \
+cmake -S${PROJECT_ROOT} -B${PROJECT_ROOT}/build \
         -DCMAKE_BUILD_TYPE=Debug \
+        -DYAKL_ARCH="SW" \
+        -DCMAKE_C_COMPILER_WORKS=True \
+        -DCMAKE_CXX_COMPILER_WORKS=True \
         -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
-        --toolchain ${PROJECT_ROOT}/cmake/toolchains/sw64.cmake
+        --toolchain ${PROJECT_ROOT}/cmake/toolchains/sw64mpi.cmake
 
 
 # Sunway-Release
