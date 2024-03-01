@@ -7,7 +7,8 @@
 #include <iomanip>
 #include <istream>
 
-const size_t N = 1 << 12;
+const size_t N = 1 << 10;
+const size_t M = 1 << 15;
 using C1Array = yakl::Array<int, 1, yakl::memHost, yakl::styleC>;
 using C2Array = yakl::Array<int, 2, yakl::memHost, yakl::styleC>;
 
@@ -104,7 +105,7 @@ int main() {
   start = std::chrono::system_clock::now();
   yakl::c::parallel_for("Compute", yakl::c::Bounds<1>(N), YAKL_LAMBDA(int i) {
     c(i) = a(i) * b(i);
-  });
+  }, yakl::LaunchConfig<4096>());
   end = std::chrono::system_clock::now();
   auto elapesd_CPE = std::chrono::duration<double>(end - start);
 
@@ -116,43 +117,42 @@ int main() {
   auto elapsed_CPE_Functor = std::chrono::duration<double>(end - start);
 
   std::cout << "Class Kernel Finished\n";
-
-  C2Array aa("aa", N, N), bb("bb", N, N), cc("cc", N, N);
+  yakl::timer_start("Set 2D Array");
+  C2Array aa("aa", N, M), bb("bb", N, M), cc("cc", N, M);
   yakl::c::parallel_outer("Compute Hierarchical", yakl::c::Bounds<1>(N), YAKL_LAMBDA(int i, yakl::InnerHandler handler) {
     yakl::c::parallel_inner(N, [&] (int j) {
       aa(i, j) = i * N + j;
       bb(i, j) = j * N + j;
       cc(i, j) = 0;
     }, handler);
-  }, yakl::LaunchConfig<N>());
+  }, yakl::LaunchConfig<M>());
+  yakl::timer_stop("Set 2D Array");
 
-  start = std::chrono::system_clock::now();
-  std::cout << "Hierarical Kernel Finished\n";
+  
+  yakl::timer_start("Serial 2D Kernel");
   for (int i = 0; i < N; i ++) {
-    for (int j = 0; j < N; j ++) {
+    for (int j = 0; j < M; j ++) {
       cc(i ,j) = aa(i, j) * bb(i, j);
     }
   }
-  end = std::chrono::system_clock::now();
-  auto elapsed_2D = std::chrono::duration<double>(end - start);
+  yakl::timer_stop("Serial 2D Kernel");
 
-  start = std::chrono::system_clock::now();
-  yakl::c::parallel_for("Compute 2D", yakl::c::Bounds<2>(N, N), YAKL_LAMBDA(int i, int j) {
+
+  yakl::timer_start("parallel_for 2D Kernel");
+  yakl::c::parallel_for("Compute 2D", yakl::c::Bounds<2>(N, M), YAKL_LAMBDA(int i, int j) {
     cc(i, j) = aa(i, j) * bb(i, j);
-  });
-  end = std::chrono::system_clock::now();
-  auto elapsed_2D_CPE = std::chrono::duration<double>(end - start);
+  }, yakl::LaunchConfig<M>());
+  yakl::timer_stop("parallel_for 2D Kernel");
 
-  start = std::chrono::system_clock::now();
+  yakl::timer_start("Hierarchical Parallel Kernel");
   yakl::c::parallel_outer("Compute Hierarchical", yakl::c::Bounds<1>(N), YAKL_LAMBDA(int i, yakl::InnerHandler handler) {
     yakl::c::parallel_inner(N, [&] (int j) {
       cc(i, j) = aa(i, j) * bb(i, j);
     }, handler);
-  }, yakl::LaunchConfig<N>());
-  end = std::chrono::system_clock::now();
-  auto elapsed_2D_CPE_Hier = std::chrono::duration<double>(end - start);
+  }, yakl::LaunchConfig<1>());
+  yakl::timer_stop("Hierarchical Parallel Kernel");
 
-  start = std::chrono::system_clock::now();
+  yakl::timer_start("Hierarchical Parallel with LDM");
   yakl::c::parallel_outer("Compute Hierarchical with LDM", yakl::c::Bounds<1>(N), YAKL_LAMBDA(int i, yakl::InnerHandler handler) {
     int *cc_ldm, *aa_ldm, *bb_ldm;
     aa_ldm = handler.alloc_ldm<int>(N);
@@ -162,24 +162,18 @@ int main() {
     CRTS_dma_iget(aa_ldm, &aa(i, 0), N * sizeof(int), &send_reply);
     CRTS_dma_iget(bb_ldm, &bb(i, 0), N * sizeof(int), &send_reply);
     CRTS_dma_wait_value(&send_reply, 2);
-    yakl::c::parallel_inner(N, [&] (int j) {
+    yakl::c::parallel_inner(M, [&] (int j) {
       cc_ldm[j] = aa_ldm[j] * bb_ldm[j];
     }, handler);
     CRTS_dma_put(&cc(i, 0), cc_ldm, N * sizeof(int));
-  }, yakl::LaunchConfig<N>());
-  end = std::chrono::system_clock::now();
-
-  auto elapsed_2D_CPE_Hier_LDM = std::chrono::duration<double>(end - start);
+  }, yakl::LaunchConfig<1>());
+  yakl::timer_stop("Hierarchical Parallel with LDM");
 
   std::cout << "CPE version costs " << elapesd_CPE.count() << "\nMPE version costs " << elapesd_MPE.count() << std::endl;
   std::cout << "CPE Functor version costs " << elapsed_CPE_Functor.count() << std::endl; 
-  std::cout << "2D MPE version costs " << elapsed_2D.count() << std::endl;
-  std::cout << "2D CPE version costs " << elapsed_2D_CPE.count() << std::endl;
-  std::cout << "2D Hierarchical version costs " << elapsed_2D_CPE_Hier.count() << std::endl;
-  std::cout << "2D Hierarchical LDM version costs " << elapsed_2D_CPE_Hier_LDM.count() << std::endl;
 
   for (int i = 0; i < N; i ++) {
-    for (int j = 0; j < N; j ++ ) {
+    for (int j = 0; j < M; j ++ ) {
       if (cc(i, j) != aa(i, j) * bb(i, j)){
         std::cout << "2D Hierarchical is wrong\n";
         exit(1);
