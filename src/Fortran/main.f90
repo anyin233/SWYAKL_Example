@@ -27,6 +27,7 @@ program wrapper
     stop
   endif
 
+  print *, c(1), c(n)
   call gator_finalize()
 
 end program wrapper

@@ -9,9 +9,7 @@ include_directories(${PROJECT_SOURCE_DIR}/YAKL)
 
 add_executable(YAKL_test main.cpp)
 yakl_process_target(YAKL_test)
-target_compile_options(YAKL_test PRIVATE  -msimd -mieee)
 
 target_link_libraries(YAKL_test ${YAKL_TARGET})
-target_link_options(YAKL_test PRIVATE -mhybrid)
 
 # target_include_directories()
