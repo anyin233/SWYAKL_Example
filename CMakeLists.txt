@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
-project(YAKL_Porting)
+project(YAKL_Porting
+        LANGUAGES CXX Fortran)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
