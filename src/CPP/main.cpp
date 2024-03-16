@@ -6,7 +6,7 @@
 #include <istream>
 
 const size_t N = 1 << 10;
-const size_t M = 1 << 20;
+const size_t M = 1 << 10;
 using C1ArrayH = yakl::Array<int, 1, yakl::memHost, yakl::styleC>;
 using C2ArrayH = yakl::Array<int, 2, yakl::memHost, yakl::styleC>;
 using C1Array = yakl::Array<int, 1, yakl::memDevice, yakl::styleC>;
