@@ -6,7 +6,7 @@
 #include <istream>
 
 const size_t N = 1 << 10;
-const size_t M = 1 << 10;
+const size_t M = 1 << 15;
 using C1ArrayH = yakl::Array<int, 1, yakl::memHost, yakl::styleC>;
 using C2ArrayH = yakl::Array<int, 2, yakl::memHost, yakl::styleC>;
 using C1Array = yakl::Array<int, 1, yakl::memDevice, yakl::styleC>;
@@ -40,24 +40,22 @@ int main() {
       bh(i) = i + 1;
     }
     std::cout << "Initialize finished\n";
-
-    auto start = std::chrono::system_clock::now();
-    for (int i = 0; i < N; i++) {
-      ch(i) = ah(i) * bh(i);
+    for (int i = 0; i < 10; i ++) {
+      yakl::timer_start("Serial 1D Kernel");
+      for (int i = 0; i < N; i++) {
+        ch(i) = ah(i) * bh(i);
+      }
+      yakl::timer_stop("Serial 1D Kernel");
+      yakl::timer_start("parallel_for 1D Kernel");
+      yakl::c::parallel_for(
+          "Compute", yakl::c::Bounds<1>(N),
+          YAKL_LAMBDA(int i) { c(i) = a(i) * b(i); }, yakl::LaunchConfig<4096>());
+      yakl::timer_stop("parallel_for 1D Kernel");
     }
-    auto end = std::chrono::system_clock::now();
-    auto elapesd_MPE = std::chrono::duration<double>(end - start);
-    std::cout << "Serial Version Finished\n";
+    
     // printf("Kernel Finished\n");
 
-    start = std::chrono::system_clock::now();
-    yakl::c::parallel_for(
-        "Compute", yakl::c::Bounds<1>(N),
-        YAKL_LAMBDA(int i) { c(i) = a(i) * b(i); }, yakl::LaunchConfig<4096>());
-    end = std::chrono::system_clock::now();
-    auto elapesd_CPE = std::chrono::duration<double>(end - start);
-
-    std::cout << "LAMBDA Kernel Finished\n";
+    
 
     yakl::timer_start("Set 2D Array");
     C2Array aa("aa", N, M), bb("bb", N, M), cc("cc", N, M);
@@ -83,24 +81,24 @@ int main() {
         bbh(i, j) = j * N + j;
       }
     }
-    yakl::timer_start("Serial 2D Kernel");
-    for (int i = 0; i < N; i++) {
-      for (int j = 0; j < M; j++) {
-        cch(i, j) = aah(i, j) * bbh(i, j);
-      }
-    }
-    yakl::timer_stop("Serial 2D Kernel");
+    
 
     for (int i = 0; i < 10; i++) {
+      yakl::timer_start("Serial 2D Kernel");
+      for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+          cch(i, j) = aah(i, j) * bbh(i, j);
+        }
+      }
+      yakl::timer_stop("Serial 2D Kernel");
+
       yakl::timer_start("parallel_for 2D Kernel");
       yakl::c::parallel_for(
           "Compute 2D", yakl::c::Bounds<2>(N, M),
           YAKL_LAMBDA(int i, int j) { cc(i, j) = aa(i, j) * bb(i, j); },
           yakl::LaunchConfig<M>());
       yakl::timer_stop("parallel_for 2D Kernel");
-    }
 
-    for (int i = 0; i < 10; i++) {
       yakl::timer_start("Hierarchical Parallel Kernel");
       yakl::c::parallel_outer(
           "Compute Hierarchical", yakl::c::Bounds<1>(N),
@@ -111,9 +109,6 @@ int main() {
           yakl::LaunchConfig<1>());
       yakl::timer_stop("Hierarchical Parallel Kernel");
     }
-
-    std::cout << "Serial version costs " << elapesd_CPE.count()
-              << "\nParallelFor version costs " << elapesd_MPE.count() << std::endl;
 
     cc.deep_copy_to(cch);
     aa.deep_copy_to(aah);
