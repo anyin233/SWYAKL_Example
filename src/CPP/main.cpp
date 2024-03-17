@@ -6,7 +6,7 @@
 #include <istream>
 
 const size_t N = 1 << 10;
-const size_t M = 1 << 15;
+const size_t M = 1 << 20;
 using C1ArrayH = yakl::Array<int, 1, yakl::memHost, yakl::styleC>;
 using C2ArrayH = yakl::Array<int, 2, yakl::memHost, yakl::styleC>;
 using C1Array = yakl::Array<int, 1, yakl::memDevice, yakl::styleC>;
@@ -20,22 +20,22 @@ int main() {
   {
     // printf("Initialized\n");
     // print_size_of_Internal();
-    C1Array a("a", N), b("b", N),
-        c("c", N);
-    C1ArrayH ah("ah", N), bh("bh", N),
-        ch("ch", N);
+    C1Array a("a", M), b("b",M),
+        c("c", M);
+    C1ArrayH ah("ah", M), bh("bh", M),
+        ch("ch", M);
     // printf("Array Crated\n");
     // print_size();
     // athread_join();
 
     yakl::c::parallel_for(
-        "Initialize", yakl::c::Bounds<1>(N), YAKL_LAMBDA(int i) {
+        "Initialize", yakl::c::Bounds<1>(M), YAKL_LAMBDA(int i) {
           a(i) = i;
           b(i) = i + 1;
           c(i) = 0;
         });
 
-    for (int i = 0; i < N; i ++) {
+    for (int i = 0; i < M; i ++) {
       ah(i) = i;
       bh(i) = i + 1;
     }
@@ -43,14 +43,14 @@ int main() {
     for (int i = 0; i < 10; i ++) {
 
       yakl::timer_start("Serial 1D Kernel");
-      for (int i = 0; i < N; i++) {
+      for (int i = 0; i < M; i++) {
         ch(i) = ah(i) * bh(i);
       }
       yakl::timer_stop("Serial 1D Kernel");
       
       yakl::timer_start("parallel_for 1D Kernel");
       yakl::c::parallel_for(
-          "Compute", yakl::c::Bounds<1>(N),
+          "Compute", yakl::c::Bounds<1>(M),
           YAKL_LAMBDA(int i) { c(i) = a(i) * b(i); });
       yakl::timer_stop("parallel_for 1D Kernel");
     }
