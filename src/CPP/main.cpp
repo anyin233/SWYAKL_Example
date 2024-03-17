@@ -41,15 +41,17 @@ int main() {
     }
     std::cout << "Initialize finished\n";
     for (int i = 0; i < 10; i ++) {
+
       yakl::timer_start("Serial 1D Kernel");
       for (int i = 0; i < N; i++) {
         ch(i) = ah(i) * bh(i);
       }
       yakl::timer_stop("Serial 1D Kernel");
+      
       yakl::timer_start("parallel_for 1D Kernel");
       yakl::c::parallel_for(
           "Compute", yakl::c::Bounds<1>(N),
-          YAKL_LAMBDA(int i) { c(i) = a(i) * b(i); }, yakl::LaunchConfig<4096>());
+          YAKL_LAMBDA(int i) { c(i) = a(i) * b(i); });
       yakl::timer_stop("parallel_for 1D Kernel");
     }
     
