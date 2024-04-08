@@ -6,7 +6,7 @@
 #include <istream>
 
 const size_t N = 1 << 10;
-const size_t M = 1 << 19;
+const size_t M = 1 << 10;
 using C1ArrayH = yakl::Array<int, 1, yakl::memHost, yakl::styleC>;
 using C2ArrayH = yakl::Array<int, 2, yakl::memHost, yakl::styleC>;
 using C1Array = yakl::Array<int, 1, yakl::memDevice, yakl::styleC>;
@@ -53,6 +53,13 @@ int main() {
           "Compute", yakl::c::Bounds<1>(N),
           YAKL_LAMBDA(int i) { c(i) = a(i) * b(i); });
       yakl::timer_stop("parallel_for 1D Kernel");
+
+      yakl::timer_start("partical kernel");
+      yakl::c::parallel_for( 
+        "Partical", yakl::c::Bounds<2>({N / 2, N - 1}, N),
+        YAKL_LAMBDA(int i, int j) {c(i) = a(i) * b(i);}
+      );
+      yakl::timer_stop("partical kernel");
     }
     
     // printf("Kernel Finished\n");

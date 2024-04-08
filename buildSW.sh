@@ -4,8 +4,8 @@ PROJECT_ROOT=$(pwd)/$(dirname $BASH_SOURCE)
 
 # currently swuc has been merged into new version of swgcc
 # source /usr/sw/swgcc/setenv-release-SEA-swuc
-source /usr/sw/swgcc/setenv-release-SEA-swuc
-# source /usr/sw/swgcc/setenv-release-SEA-1417
+# source /usr/sw/swgcc/setenv-release-SEA-swuc
+source /usr/sw/swgcc/setenv-release-SEA-1432
 source /usr/sw/mpi/setenv-mpi-swuc
 
 
@@ -27,6 +27,8 @@ source /usr/sw/mpi/setenv-mpi-swuc
 cmake -S${PROJECT_ROOT} -B${PROJECT_ROOT}/build \
         -DCMAKE_BUILD_TYPE=Debug \
         -DYAKL_ARCH="SW" \
+        -DYAKL_SW_FLAGS="-DYAKL_DEFAULT_VECTOR_LEN=512 -O3 -g -ffast-math -mieee -mftz -msimd -fbranch-predict-hint -funroll-innermost-loop -faggressive-ifcvt-for-vect -mslave-l0cache" \
+        -DYAKL_SW_PARALLEL_MEMCPY=ON \
         -DYAKL_PROFILE=True \
         -DCMAKE_C_COMPILER_WORKS=True \
         -DCMAKE_CXX_COMPILER_WORKS=True \
