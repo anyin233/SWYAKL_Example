@@ -59,7 +59,7 @@ int main(int argc, char **argv) {
 
         yakl::timer_start("head-2d kernel");
         parallel_for(
-            Bounds<2>(1, N + 1, 1, N + 1), YAKL_LAMBDA(int i, int j) {
+            Bounds<2>({1, N + 1}, {1, N + 1}), YAKL_LAMBDA(int i, int j) {
               SArray<real, 2, 3, 3> a;
               for (int ii = -1; ii <= 1; ii++) {
                 for (int jj = -1; jj <= 1; jj++) {
@@ -192,7 +192,7 @@ int main(int argc, char **argv) {
               if (j > 1) {
                 ex_device(i, j) = ex_device(i, j) - 0.5 * (hz_device(i, j) - hz_device(i, j - 1));
               }
-            });
+            }, yakl::LaunchConfig<1024, false>());
         parallel_for(
             Bounds<2>({0, N}, {0, NY}), YAKL_LAMBDA(int i, int j) {
               if (i > 0 && j > 0) {
@@ -200,7 +200,7 @@ int main(int argc, char **argv) {
                                   0.7 * (ex_device(i, j + 1) - ex_device(i, j) +
                                          ey_device(i + 1, j) - ey_device(i, j));
               }
-            });
+            }, yakl::LaunchConfig<1024, false>());
         yakl::timer_stop("fdtd-2d kernel");
       }
     }
