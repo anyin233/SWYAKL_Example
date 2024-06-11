@@ -12,11 +12,11 @@ using C2ArrayH = yakl::Array<int, 2, yakl::memHost, yakl::styleC>;
 using C1Array = yakl::Array<int, 1, yakl::memDevice, yakl::styleC>;
 using C2Array = yakl::Array<int, 2, yakl::memDevice, yakl::styleC>;
 
-[[gnu::kernel]] void print_size() {
-  if (_PEN == 0) {
-    std::cout << "CPE sizeof yakl::swTimer " << sizeof(yakl::swTimer) << std::endl;
-  }
-}
+// [[gnu::kernel]] void print_size() {
+//   if (_PEN == 0) {
+//     std::cout << "CPE sizeof yakl::swTimer " << sizeof(yakl::swTimer) << std::endl;
+//   }
+// }
 
 // #pragma swuc push host
 int main() {
@@ -25,6 +25,7 @@ int main() {
   yakl::init();
   {
     for (size_t n = 6; n < 14; n++) {
+      std::cout << "Allocating 2^" << n << std::endl;
       const size_t N = 1 << n;
       const size_t M = 1 << n;
 
@@ -120,5 +121,4 @@ int main() {
 
   yakl::finalize();
   std::cout << "Program Exiting" << std::endl;
-  SW_BKPT(finalize);
 }
