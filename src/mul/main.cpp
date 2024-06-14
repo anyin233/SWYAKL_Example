@@ -1,4 +1,5 @@
 #include "YAKL.h"
+#include "YAKL_finalize.h"
 #include <chrono>
 #include <iomanip>
 #include <ios>
@@ -114,6 +115,19 @@ int main() {
             },
             yakl::LaunchConfig<1>());
         yakl::timer_stop(format_name.c_str());
+      }
+      if (n == 6) {
+        for (int i = 0; i < N; i ++) {
+          for (int j = 0; j < N; j ++) {
+            if (cch(i, j) != cc(i, j)) {
+              std::cout << "Error at " << i << " " << j << " c = " << cch(i, j) << " " << cc(i, j) << std::endl;
+              std::cout << "Error at " << i << " " << j << " a = " << aah(i, j) << " " << aa(i, j) << std::endl;
+              std::cout << "Error at " << i << " " << j << " b = " << bbh(i, j) << " " << bb(i, j) << std::endl;
+              yakl::finalize();
+              return 1;
+            }
+          }
+        }
       }
 
     }
