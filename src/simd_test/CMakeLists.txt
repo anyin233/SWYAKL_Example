@@ -7,10 +7,11 @@ include_directories(${PROJECT_SOURCE_DIR}/YAKL)
 # yakl_process_target(YAKL_test_cpe)
 # target_compile_options(YAKL_test_cpe PRIVATE -mslave -msimd -mieee)
 
-add_executable(mul main.cpp)
-yakl_process_target(mul)
+add_executable(simd_test main.cpp)
+yakl_process_target(simd_test)
 
-target_link_libraries(mul ${YAKL_TARGET} -lswperf)
-target_link_directories(mul PUBLIC /usr/sw/penv/lib)
-target_include_directories(mul PUBLIC /usr/sw/penv/include)
+target_link_libraries(simd_test ${YAKL_TARGET} -lswperf)
+target_link_directories(simd_test PUBLIC /usr/sw/penv/lib)
+target_include_directories(simd_test PUBLIC /usr/sw/penv/include)
+
 # target_include_directories()

@@ -1,17 +1,26 @@
 #include "YAKL.h"
+#include "YAKL_LaunchConfig.h"
 #include "YAKL_finalize.h"
 #include <chrono>
 #include <iomanip>
 #include <ios>
 #include <iostream>
 #include <istream>
+#include <swperf.h>
+
+extern "C" {
+  void penv_slave_fd_float_init();
+  void penv_slave_fd_float_sum_init();
+  void penv_slave_fd_float_count(unsigned long *count);
+}
 
 const size_t N = 1 << 10;
 const size_t M = 1 << 10;
-using C1ArrayH = yakl::Array<int, 1, yakl::memHost, yakl::styleC>;
-using C2ArrayH = yakl::Array<int, 2, yakl::memHost, yakl::styleC>;
-using C1Array = yakl::Array<int, 1, yakl::memDevice, yakl::styleC>;
-using C2Array = yakl::Array<int, 2, yakl::memDevice, yakl::styleC>;
+using C1ArrayH = yakl::Array<double, 1, yakl::memHost, yakl::styleC>;
+using C2ArrayH = yakl::Array<double, 2, yakl::memHost, yakl::styleC>;
+using C1Array = yakl::Array<double, 1, yakl::memDevice, yakl::styleC>;
+using C2Array = yakl::Array<double, 2, yakl::memDevice, yakl::styleC>;
+
 
 // [[gnu::kernel]] void print_size() {
 //   if (_PEN == 0) {
@@ -24,7 +33,12 @@ int main() {
   // std::ios_base::sync_with_stdio(false);
   // SW_BKPT(init);
   yakl::init();
+  unsigned long slave_fd_float_cnt_start = 0, slave_fd_float_cnt_end = 0;
   {
+    penv_slave_fd_float_sum_init();
+    penv_slave_fd_float_count(&slave_fd_float_cnt_start);
+    asm volatile("nop");
+    // SW_BKPT(perf);
     for (size_t n = 6; n < 14; n++) {
       std::cout << "Allocating 2^" << n << std::endl;
       const size_t N = 1 << n;
@@ -59,7 +73,9 @@ int main() {
         yakl::timer_start(format_name.c_str());
         yakl::c::parallel_for(
             "Compute", yakl::c::Bounds<1>(N),
-            YAKL_LAMBDA(int i) { c(i) = a(i) * b(i); });
+            YAKL_LAMBDA(int i) { 
+              c(i) = a(i) * b(i); 
+            }, yakl::LaunchConfig<32, false>());
         yakl::timer_stop(format_name.c_str());
       }
 
@@ -131,6 +147,8 @@ int main() {
       }
 
     }
+    penv_slave_fd_float_count(&slave_fd_float_cnt_end);
+    printf("Total Float inst count: %lu\n", slave_fd_float_cnt_end - slave_fd_float_cnt_start);
   }
 
   yakl::finalize();
