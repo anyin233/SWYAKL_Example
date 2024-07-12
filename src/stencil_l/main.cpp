@@ -1,7 +1,6 @@
 
 
 #include "YAKL.h"
-#include "YAKL_timers.h"
 #include <iostream>
 
 typedef yakl::Array<double, 1, yakl::memDevice, yakl::styleC> real1d_device;
@@ -115,14 +114,37 @@ int main(int argc, char **argv) {
         yakl::c::parallel_for(
             yakl::c::Bounds<2>({1, N + 1}, {1, N + 1}),
             YAKL_LAMBDA(int i, int j) {
-              yakl::SArray<double, 2, 3, 3> a;
-              for (int ii = -1; ii <= 1; ii++)
-                for (int jj = -1; jj <= 1; jj++)
-                  a(ii + 1, jj + 1) = a_device2d(i + ii, j + jj);
-              b_device2d(i, j) =
-                  randq0 * a(1, 1) + randq1 * a(0, 1) + randq2 * a(2, 1) +
-                  randq3 * a(1, 0) + randq4 * a(1, 2) + randq5 * a(0, 0) +
-                  randq6 * a(0, 2) + randq7 * a(2, 0) + randq8 * a(2, 2);
+              // yakl::SArray<double, 2, 3, 3> a;
+              // for (int ii = -1; ii <= 1; ii++)
+              //   for (int jj = -1; jj <= 1; jj++)
+              //     a(ii + 1, jj + 1) = a_device2d(i + ii, j + jj);
+              
+              yakl::simd::Pack<double, 8> a_pack;
+              yakl::simd::Pack<double, 8> rand_pack;
+
+              a_pack(0) = a_device2d(i - 1, j - 1);
+              a_pack(1) = a_device2d(i - 1, j);
+              a_pack(2) = a_device2d(i - 1, j + 1);
+              a_pack(3) = a_device2d(i, j - 1);
+              a_pack(4) = a_device2d(i, j);
+              a_pack(5) = a_device2d(i, j + 1);
+              a_pack(6) = a_device2d(i + 1, j - 1);
+              a_pack(7) = a_device2d(i + 1, j);
+              rand_pack(0) = randq5;
+              rand_pack(1) = randq1;
+              rand_pack(2) = randq6;
+              rand_pack(3) = randq3;
+              rand_pack(4) = randq0;
+              rand_pack(5) = randq4;
+              rand_pack(6) = randq7;
+              rand_pack(7) = randq2;
+              rand_pack *= a_pack;
+              b_device2d(i, j) = randq8 * a_device2d(i + 1, j + 1) + rand_pack.sum();
+              
+              // b_device2d(i, j) =
+              //     randq0 * a(1, 1) + randq1 * a(0, 1) + randq2 * a(2, 1) +
+              //     randq3 * a(1, 0) + randq4 * a(1, 2) + randq5 * a(0, 0) +
+              //     randq6 * a(0, 2) + randq7 * a(2, 0) + randq8 * a(2, 2);
             });
         yakl::timer_stop("stencil-2d-9");
       }
@@ -149,16 +171,43 @@ int main(int argc, char **argv) {
         yakl::c::parallel_for(
             yakl::c::Bounds<3>({1, N + 1}, {1, N + 1}, {1, N + 1}),
             YAKL_LAMBDA(int i, int j, int k) {
-              yakl::SArray<double, 3, 3, 3, 3> a;
-              for (int ii = -1; ii <= 1; ii++)
-                for (int jj = -1; jj <= 1; jj++)
-                  for (int kk = -1; kk <= 1; kk++)
-                    a(ii + 1, jj + 1, kk + 1) =
-                        a_device3d(i + ii, j + jj, k + kk);
-              b_device3d(i, j, k) = randq0 * a(1, 1, 1) + randq1 * a(0, 1, 1) +
-                                    randq2 * a(2, 1, 1) + randq3 * a(1, 0, 1) +
-                                    randq4 * a(1, 2, 1) + randq5 * a(1, 1, 0) +
-                                    randq6 * a(1, 1, 2);
+              // yakl::SArray<double, 3, 3, 3, 3> a;
+              // for (int ii = -1; ii <= 1; ii++)
+              //   for (int jj = -1; jj <= 1; jj++)
+              //     for (int kk = -1; kk <= 1; kk++)
+              //       a(ii + 1, jj + 1, kk + 1) =
+              //           a_device3d(i + ii, j + jj, k + kk);
+              // b_device3d(i, j, k) = randq0 * a(1, 1, 1) + randq1 * a(0, 1, 1) +
+              //                       randq2 * a(2, 1, 1) + randq3 * a(1, 0, 1) +
+              //                       randq4 * a(1, 2, 1) + randq5 * a(1, 1, 0) +
+              //                       randq6 * a(1, 1, 2);
+              yakl::simd::Pack<double, 8> a_pack;
+              yakl::simd::Pack<double, 8> rand_pack;
+              // for (int ii = -1; ii <= 1; ii ++) {
+              //   for (int jj = -1; jj <= 1; jj ++) {
+              //     for (int kk = -1; kk <= 0; kk ++) {
+              //       a_pack(ii + 1 + (jj + 1) * 3 + (kk + 1) * 9) = a_device3d(ii + i, jj + j, kk + k);
+              //     }
+              //   } 
+              // }
+              a_pack(0) = a_device3d(i + 1, j + 1, k + 1);
+              a_pack(1) = a_device3d(i + 0, j + 1, k + 1);
+              a_pack(2) = a_device3d(i + 2, j + 1, k + 1);
+              a_pack(3) = a_device3d(i + 1, j + 0, k + 1);
+              a_pack(4) = a_device3d(i + 1, j + 2, k + 1);
+              a_pack(5) = a_device3d(i + 1, j + 1, k + 0);
+              a_pack(6) = a_device3d(i + 1, j + 1, k + 2);
+              a_pack(7) = 0;
+              rand_pack(0) = randq0;
+              rand_pack(1) = randq1;
+              rand_pack(2) = randq2;
+              rand_pack(3) = randq3;
+              rand_pack(4) = randq4;
+              rand_pack(5) = randq5;
+              rand_pack(6) = randq6;
+              rand_pack(7) = 0;
+              rand_pack *= a_pack;
+              b_device3d(i, j, k) = rand_pack.sum();
             });
         yakl::timer_stop("stencil-3d-7");
       }
@@ -178,27 +227,85 @@ int main(int argc, char **argv) {
         yakl::c::parallel_for(
             yakl::c::Bounds<3>({1, N + 1}, {1, N + 1}, {1, N + 1}),
             YAKL_LAMBDA(int i, int j, int k) {
-              yakl::SArray<double, 3, 3, 3, 3> a;
-              for (int ii = -1; ii <= 1; ii++)
-                for (int jj = -1; jj <= 1; jj++)
-                  for (int kk = -1; kk <= 1; kk++)
-                    a(ii + 1, jj + 1, kk + 1) =
-                        a_device3d(i + ii, j + jj, k + kk);
-              b_device3d(i, j, k) =
-                  randq0 * a(1, 1, 1) + randq1 * a(0, 1, 1) +
-                  randq2 * a(2, 1, 1) + randq3 * a(1, 0, 1) +
-                  randq4 * a(1, 2, 1) + randq5 * a(1, 1, 0) +
-                  randq6 * a(1, 1, 2) + randq7 * a(0, 0, 1) +
-                  randq8 * a(0, 2, 1) + randq9 * a(2, 0, 1) +
-                  randq10 * a(2, 2, 1) + randq11 * a(0, 1, 0) +
-                  randq12 * a(0, 1, 2) + randq13 * a(2, 1, 0) +
-                  randq14 * a(2, 1, 2) + randq15 * a(1, 0, 0) +
-                  randq16 * a(1, 0, 2) + randq17 * a(1, 2, 0) +
-                  randq18 * a(1, 2, 2) + randq19 * a(0, 0, 0) +
-                  randq20 * a(0, 0, 2) + randq21 * a(0, 2, 0) +
-                  randq22 * a(0, 2, 2) + randq23 * a(2, 0, 0) +
-                  randq24 * a(2, 0, 2) + randq25 * a(2, 2, 0) +
-                  randq26 * a(2, 2, 2);
+              // yakl::SArray<double, 3, 3, 3, 3> a;
+              // for (int ii = -1; ii <= 1; ii++)
+              //   for (int jj = -1; jj <= 1; jj++)
+              //     for (int kk = -1; kk <= 1; kk++)
+              //       a(ii + 1, jj + 1, kk + 1) =
+              //           a_device3d(i + ii, j + jj, k + kk);
+              yakl::SArray<yakl::simd::Pack<double, 8>, 1, 3> a_packs;
+              yakl::SArray<yakl::simd::Pack<double, 8>, 1, 3> rand_packs;
+              a_packs(0)(0) = a_device3d(i, j, k);
+              a_packs(0)(1) = a_device3d(i - 1, j, k);
+              a_packs(0)(2) = a_device3d(i + 1, j, k);
+              a_packs(0)(3) = a_device3d(i, j - 1, k);
+              a_packs(0)(4) = a_device3d(i, j + 1, k);
+              a_packs(0)(5) = a_device3d(i, j, k - 1);
+              a_packs(0)(6) = a_device3d(i, j, k + 1);
+              a_packs(0)(7) = a_device3d(i - 1, j - 1, k);
+              a_packs(1)(0) = a_device3d(i - 1, j + 1, k);
+              a_packs(1)(1) = a_device3d(i + 1, j - 1, k);
+              a_packs(1)(2) = a_device3d(i + 1, j + 1, k);
+              a_packs(1)(3) = a_device3d(i - 1, j, k - 1);
+              a_packs(1)(4) = a_device3d(i - 1, j, k + 1);
+              a_packs(1)(5) = a_device3d(i + 1, j, k - 1);
+              a_packs(1)(6) = a_device3d(i + 1, j, k + 1);
+              a_packs(1)(7) = a_device3d(i, j - 1, k - 1);
+              a_packs(2)(0) = a_device3d(i, j - 1, k + 1);
+              a_packs(2)(1) = a_device3d(i, j + 1, k - 1);
+              a_packs(2)(2) = a_device3d(i, j + 1, k + 1);
+              a_packs(2)(3) = a_device3d(i - 1, j - 1, k - 1);
+              a_packs(2)(4) = a_device3d(i - 1, j - 1, k + 1);
+              a_packs(2)(5) = a_device3d(i - 1, j + 1, k - 1);
+              a_packs(2)(6) = a_device3d(i - 1, j + 1, k + 1);
+              a_packs(2)(7) = a_device3d(i + 1, j - 1, k - 1);
+              rand_packs(0)(0) = randq0;
+              rand_packs(0)(1) = randq1;
+              rand_packs(0)(2) = randq2;
+              rand_packs(0)(3) = randq3;
+              rand_packs(0)(4) = randq4;
+              rand_packs(0)(5) = randq5;
+              rand_packs(0)(6) = randq6;
+              rand_packs(0)(7) = randq7;
+              rand_packs(1)(0) = randq8;
+              rand_packs(1)(1) = randq9;
+              rand_packs(1)(2) = randq10;
+              rand_packs(1)(3) = randq11;
+              rand_packs(1)(4) = randq12;
+              rand_packs(1)(5) = randq13;
+              rand_packs(1)(6) = randq14;
+              rand_packs(1)(7) = randq15;
+              rand_packs(2)(0) = randq16;
+              rand_packs(2)(1) = randq17;
+              rand_packs(2)(2) = randq18;
+              rand_packs(2)(3) = randq19;
+              rand_packs(2)(4) = randq20;
+              rand_packs(2)(5) = randq21;
+              rand_packs(2)(6) = randq22;
+              rand_packs(2)(7) = randq23;
+              rand_packs(0)*=a_packs(0);
+              rand_packs(1)*=a_packs(1);
+              rand_packs(2)*=a_packs(2);
+              b_device3d(i, j, k) = rand_packs(0).sum() + rand_packs(1).sum() + rand_packs(2).sum();
+              // b_device3d(i, j, k) =
+              //     randq0 * a(1, 1, 1) + randq1 * a(0, 1, 1) +
+              //     randq2 * a(2, 1, 1) + randq3 * a(1, 0, 1) +
+              //     randq4 * a(1, 2, 1) + randq5 * a(1, 1, 0) +
+              //     randq6 * a(1, 1, 2) + randq7 * a(0, 0, 1) +
+              //     randq8 * a(0, 2, 1) + randq9 * a(2, 0, 1) +
+              //     randq10 * a(2, 2, 1) + randq11 * a(0, 1, 0) +
+              //     randq12 * a(0, 1, 2) + randq13 * a(2, 1, 0) +
+              //     randq14 * a(2, 1, 2) + randq15 * a(1, 0, 0) +
+              //     randq16 * a(1, 0, 2) + randq17 * a(1, 2, 0) +
+              //     randq18 * a(1, 2, 2) + randq19 * a(0, 0, 0) +
+              //     randq20 * a(0, 0, 2) + randq21 * a(0, 2, 0) +
+              //     randq22 * a(0, 2, 2) + randq23 * a(2, 0, 0) +
+              //     randq24 * a(2, 0, 2) + randq25 * a(2, 2, 0) +
+              //     randq26 * a(2, 2, 2);
+              b_device3d(i, j, k) = randq24 * a_device3d(i + 1, j + -1, k + 1) + b_device3d(i, j, k);
+              b_device3d(i, j, k) = randq25 * a_device3d(i + 1, j + 1, k - 1) + b_device3d(i, j, k);
+              b_device3d(i, j, k) = randq26 * a_device3d(i + 1, j + 1, k + 1) + b_device3d(i, j, k);
+              
             });
         yakl::timer_stop("stencil-3d-27");
       }
@@ -269,7 +376,7 @@ int main(int argc, char **argv) {
           YAKL_LAMBDA(int i, int j) { a_device(i, j) = (double)rand(); });
 
       for (int i = 0; i < 20; i++) {
-        yakl::timer_start("head-2d serial");
+        yakl::timer_start("heat-2d serial");
         for (int i = 1; i < N + 1; i++) {
           for (int j = 1; j < N + 1; j++) {
             b_host(i, j) =
@@ -280,9 +387,9 @@ int main(int argc, char **argv) {
                 a_host(i, j);
           }
         }
-        yakl::timer_stop("head-2d serial");
+        yakl::timer_stop("heat-2d serial");
 
-        yakl::timer_start("head-2d kernel");
+        yakl::timer_start("heat-2d kernel");
         parallel_for(
             Bounds<2>({1, N + 1}, {1, N + 1}), YAKL_LAMBDA(int i, int j) {
               SArray<real, 2, 3, 3> a;
@@ -295,7 +402,7 @@ int main(int argc, char **argv) {
                                0.125 * (a(1, 2) - 2.0 * a(1, 1) + a(1, 0)) +
                                a(1, 1);
             });
-        yakl::timer_stop("head-2d kernel");
+        yakl::timer_stop("heat-2d kernel");
       }
 
       b_device.deep_copy_to(b_host);
