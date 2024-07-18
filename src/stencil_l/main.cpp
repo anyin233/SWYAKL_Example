@@ -94,7 +94,7 @@ int main(int argc, char **argv) {
         }
         yakl::timer_stop("stencil-2d-5 serial");
         
-        yakl::timer_start("stencil-2d-5");
+        yakl::timer_start("stencil-2d-5 kernel");
         yakl::c::parallel_for(
             yakl::c::Bounds<2>({1, N + 1}, {1, N + 1}),
             YAKL_LAMBDA(int i, int j) {
@@ -106,7 +106,7 @@ int main(int argc, char **argv) {
                                  randq2 * a(2, 1) + randq3 * a(1, 0) +
                                  randq4 * a(1, 2);
             });
-        yakl::timer_stop("stencil-2d-5");
+        yakl::timer_stop("stencil-2d-5 kernel");
 
         yakl::timer_start("stencil-2d-5 simd");
         yakl::c::parallel_for(
@@ -165,7 +165,7 @@ int main(int argc, char **argv) {
         }
         yakl::timer_stop("stencil-2d-9 serial");
 
-        yakl::timer_start("stencil-2d-9");
+        yakl::timer_start("stencil-2d-9 kernel");
         yakl::c::parallel_for(
             yakl::c::Bounds<2>({1, N + 1}, {1, N + 1}),
             YAKL_LAMBDA(int i, int j) {
@@ -180,7 +180,7 @@ int main(int argc, char **argv) {
                   randq3 * a(1, 0) + randq4 * a(1, 2) + randq5 * a(0, 0) +
                   randq6 * a(0, 2) + randq7 * a(2, 0) + randq8 * a(2, 2);
             }, yakl::LaunchConfig<512 * 8, false>());
-        yakl::timer_stop("stencil-2d-9");
+        yakl::timer_stop("stencil-2d-9 kernel");
 
         yakl::timer_start("stencil-2d-9 simd");
         yakl::c::parallel_for(
@@ -265,7 +265,7 @@ int main(int argc, char **argv) {
         }
         yakl::timer_stop("stencil-3d-7 serial");
 
-        yakl::timer_start("stencil-3d-7");
+        yakl::timer_start("stencil-3d-7 kernel");
         yakl::c::parallel_for(
             yakl::c::Bounds<3>({1, N + 1}, {1, N + 1}, {1, N + 1}),
             YAKL_LAMBDA(int i, int j, int k) {
@@ -280,7 +280,7 @@ int main(int argc, char **argv) {
                                     randq4 * a(1, 2, 1) + randq5 * a(1, 1, 0) +
                                     randq6 * a(1, 1, 2);
             });
-        yakl::timer_stop("stencil-3d-7");
+        yakl::timer_stop("stencil-3d-7 kernel");
 
         yakl::timer_start("stencil-3d-7 simd");
         yakl::c::parallel_for(
@@ -341,7 +341,7 @@ int main(int argc, char **argv) {
         }
         yakl::timer_stop("stencil-3d-27 serial");
 
-        yakl::timer_start("stencil-3d-27");
+        yakl::timer_start("stencil-3d-27 kernel");
         yakl::c::parallel_for(
             yakl::c::Bounds<3>({1, N + 1}, {1, N + 1}, {1, N + 1}),
             YAKL_LAMBDA(int i, int j, int k) {
@@ -368,7 +368,7 @@ int main(int argc, char **argv) {
                   randq24 * a(2, 0, 2) + randq25 * a(2, 2, 0) +
                   randq26 * a(2, 2, 2);
             });
-        yakl::timer_stop("stencil-3d-27");
+        yakl::timer_stop("stencil-3d-27 kernel");
 
         yakl::timer_start("stencil-3d-27 simd");
         yakl::c::parallel_for(
@@ -486,6 +486,9 @@ int main(int argc, char **argv) {
         yakl::timer_stop("stencil-1d-3 kernel");
       }
 
+      // stencil-1d-3-simd
+      // real1d_device a_device1d("a_device1d", N + 2), b_device1d("b_device1d",
+      // N + 2);
       yakl::c::parallel_for(
           yakl::c::Bounds<1>(1, N_1D + 1), YAKL_LAMBDA(int i) {
             a_device1d(i) = (double)rand();
@@ -573,7 +576,7 @@ int main(int argc, char **argv) {
             });
         yakl::timer_stop("heat-2d kernel");
 
-        yakl::timer_start("heat-2d kernel simd");
+        yakl::timer_start("heat-2d simd");
         parallel_for(
             Bounds<2>({1, N + 1}, {1, 1 + ((N - 1) / 8 + 1)}),
             YAKL_LAMBDA(int i, int j) {
@@ -614,7 +617,7 @@ int main(int argc, char **argv) {
                 b_device(i, vi + j_start) = s_val2(vi);
               }
             });
-        yakl::timer_stop("heat-2d kernel simd");
+        yakl::timer_stop("heat-2d simd");
       }
 
       b_device.deep_copy_to(b_host);
@@ -664,7 +667,7 @@ int main(int argc, char **argv) {
             });
         yakl::timer_stop("jacobi-2d kernel");
 
-        yakl::timer_start("jacobi-2d kernel simd");
+        yakl::timer_start("jacobi-2d simd");
         parallel_for(
             Bounds<2>({2, N - 1}, {2, ((N - 4) / 8 + 3)}),
             YAKL_LAMBDA(int i, int j) {
@@ -693,7 +696,7 @@ int main(int argc, char **argv) {
                 b_device(i, vi + j_start) = a_packs(1, 1)(vi);
               }
             });
-        yakl::timer_stop("jacobi-2d kernel simd");
+        yakl::timer_stop("jacobi-2d simd");
       }
 
       b_device.deep_copy_to(b_host);
@@ -789,7 +792,7 @@ int main(int argc, char **argv) {
       printf("YAKL parallel_for simd\n");
       printf("-----------------------------------------\n");
       for (int t = 0; t < tmax; t++) {
-        yakl::timer_start("fdtd-2d kernel simd");
+        yakl::timer_start("fdtd-2d simd");
         parallel_for(Bounds<1>(N), YAKL_LAMBDA(int i) { ey_device(0, i) = t; });
         parallel_for(
             Bounds<2>({0, N}, {0, (N - 1) / 8 + 1}),
@@ -876,7 +879,7 @@ int main(int argc, char **argv) {
               }
             },
             yakl::LaunchConfig<1024, false>());
-        yakl::timer_stop("fdtd-2d kernel simd");
+        yakl::timer_stop("fdtd-2d simd");
       }
     }
   }
