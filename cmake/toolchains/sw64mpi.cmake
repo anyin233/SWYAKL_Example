@@ -16,4 +16,7 @@ set(CMAKE_Fortran_COMPILER swgfortran)
 
 set(CMAKE_CROSSCOMPILING_EMULATOR "${CMAKE_SOURCE_DIR}/tools/bsub.sh")
 add_compile_options(-mhybrid-coding -mieee -mftz -msimd)
+set(CMAKE_C_COMPILER_WORKS ON)
+set(CMAKE_CXX_COMPILER_WORKS ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_link_options(-mhybrid)

@@ -1,6 +1,4 @@
 #include "YAKL.h"
-#include "YAKL_LaunchConfig.h"
-#include "YAKL_finalize.h"
 #include <chrono>
 #include <iomanip>
 #include <ios>
@@ -41,8 +39,8 @@ int main() {
     // SW_BKPT(perf);
     for (size_t n = 6; n < 14; n++) {
       std::cout << "Allocating 2^" << n << std::endl;
-      const size_t N = 1 << n;
-      const size_t M = 1 << n;
+      const int N = 1 << n;
+      const int M = 1 << n;
 
       C1Array a("a", N), b("b", N), c("c", N);
       C1ArrayH ah("ah", N), bh("bh", N), ch("ch", N);
@@ -72,10 +70,20 @@ int main() {
         format_name = "parallel_for 1D Kernel " + std::to_string(n);
         yakl::timer_start(format_name.c_str());
         yakl::c::parallel_for(
-            "Compute", yakl::c::Bounds<1>(N),
+            "Compute", yakl::c::Bounds<1>((N - 1) / 8 + 1),
             YAKL_LAMBDA(int i) { 
-              c(i) = a(i) * b(i); 
-            }, yakl::LaunchConfig<32, false>());
+              yakl::simd::Pack<double, 8> a_pack, b_pack;
+              int i_start = i * 8;
+              int i_end = std::min(i_start + 8, N);
+              for (int i = i_start; i < i_end; i++) {
+                a_pack(i - i_start) = a(i);
+                b_pack(i - i_start) = b(i);
+              }
+              a_pack *= b_pack;
+              for (int i = i_start; i < i_end; i++) {
+                c(i) = a_pack(i - i_start);
+              }
+            });
         yakl::timer_stop(format_name.c_str());
       }
 
@@ -115,10 +123,23 @@ int main() {
         yakl::timer_stop(format_name.c_str());
 
         format_name = "parallel_for 2D Kernel " + std::to_string(n);
+        
         yakl::timer_start(format_name.c_str());
         yakl::c::parallel_for(
-            "Compute 2D", yakl::c::Bounds<2>(N, M),
-            YAKL_LAMBDA(int i, int j) { cc(i, j) = aa(i, j) * bb(i, j); });
+            "Compute 2D", yakl::c::Bounds<2>(N, (M - 1) / 8 + 1),
+            YAKL_LAMBDA(int i, int j) { 
+              int j_start = j * 8;
+              int j_end = std::min(j_start + 8, M);
+              yakl::simd::Pack<double, 8> a_pack, b_pack;
+              for (int j = j_start; j < j_end; j++) {
+                a_pack(j - j_start) = aa(i, j);
+                b_pack(j - j_start) = bb(i, j);
+              }
+              a_pack *= b_pack;
+              for (int j = j_start; j < j_end; j++) {
+                cc(i, j) = a_pack(j - j_start);
+              }
+            });
         yakl::timer_stop(format_name.c_str());
 
         format_name = "Hierarchical Parallel Kernel " + std::to_string(n);
