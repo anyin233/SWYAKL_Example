@@ -27,7 +27,7 @@ source /usr/sw/mpi/setenv-mpi-swuc
 cmake -S${PROJECT_ROOT} -B${PROJECT_ROOT}/build \
         -DCMAKE_BUILD_TYPE=Debug \
         -DYAKL_ARCH="SW" \
-        -DYAKL_SW_FLAGS="-DYAKL_DEFAULT_VECTOR_LEN=512 -g -O3 -ftree-vectorize -funroll-innermost-loop -ffast-math -mieee -mftz -mfma -msimd -fbranch-predict-hint -funroll-innermost-loop -mslave-l0cache -lswperf" \
+        -DYAKL_SW_FLAGS="-DYAKL_DEFAULT_VECTOR_LEN=512 -g -O3 -ftree-vectorize -funroll-innermost-loop -ffast-math -mieee -mftz -mfma -msimd -fbranch-predict-hint -funroll-innermost-loop -mslave-l0cache -lswperf -DYAKL_ENABLE_CPE_PROFILER" \
         -DYAKL_SW_PARALLEL_MEMCPY=ON \
         -DYAKL_PROFILE=True \
         -DCMAKE_C_COMPILER_WORKS=True \

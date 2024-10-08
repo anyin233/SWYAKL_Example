@@ -3,3 +3,10 @@ build
 
 *.code-workspace
 .cache
+
+*.csv
+.DS_Store
+*.log
+bsub.sh
+*.tar.gz
+src/.DS_Store
