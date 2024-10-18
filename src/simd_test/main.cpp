@@ -1,12 +1,11 @@
 #include "YAKL.h"
 #include "YAKL_timers.h"
 #include <iostream>
-#include "swperf.h"
 
-extern "C" {
-  void penv_slave_fd_float_sum_init();
-  void penv_slave_fd_float_count(unsigned long *slave_fd_count);
-}
+// extern "C" {
+// void penv_slave_fd_float_sum_init();
+// void penv_slave_fd_float_count(unsigned long *slave_fd_count);
+// }
 
 const int N = 1 << 22;
 const int SIMD_LEN = 8;
@@ -34,7 +33,7 @@ int main() {
   std::cout << "=========================================" << std::endl;
   yakl::init();
   {
-  // penv_slave_fd_float_sum_init();
+    // penv_slave_fd_float_sum_init();
     C1Array a("a", N), b("b", N), c("c", N);
     C1ArrayH ah("ah", N), bh("bh", N), ch("ch", N);
     yakl::c::parallel_for(
@@ -48,8 +47,10 @@ int main() {
     for (int t = 0; t < 100; t++) {
       yakl::timer_start("Normal 1D");
       yakl::c::parallel_for(
-          "Normal 1D", yakl::c::Bounds<1>(N),
-          YAKL_LAMBDA(int i) { ch(i) = ah(i) * bh(i); ch(i) += 1;});
+          "Normal 1D", yakl::c::Bounds<1>(N), YAKL_LAMBDA(int i) {
+            ch(i) = ah(i) * bh(i);
+            ch(i) += 1;
+          });
       yakl::timer_stop("Normal 1D");
 
       int blk_size = N / SIMD_LEN;

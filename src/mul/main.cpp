@@ -4,13 +4,13 @@
 #include <ios>
 #include <iostream>
 #include <istream>
-#include <swperf.h>
+// #include <swperf.h>
 
-extern "C" {
-  void penv_slave_fd_float_init();
-  void penv_slave_fd_float_sum_init();
-  void penv_slave_fd_float_count(unsigned long *count);
-}
+// extern "C" {
+//   void penv_slave_fd_float_init();
+//   void penv_slave_fd_float_sum_init();
+//   void penv_slave_fd_float_count(unsigned long *count);
+// }
 
 const size_t N = 1 << 10;
 const size_t M = 1 << 10;
@@ -19,10 +19,10 @@ using C2ArrayH = yakl::Array<double, 2, yakl::memHost, yakl::styleC>;
 using C1Array = yakl::Array<double, 1, yakl::memDevice, yakl::styleC>;
 using C2Array = yakl::Array<double, 2, yakl::memDevice, yakl::styleC>;
 
-
 // [[gnu::kernel]] void print_size() {
 //   if (_PEN == 0) {
-//     std::cout << "CPE sizeof yakl::swTimer " << sizeof(yakl::swTimer) << std::endl;
+//     std::cout << "CPE sizeof yakl::swTimer " << sizeof(yakl::swTimer) <<
+//     std::endl;
 //   }
 // }
 
@@ -33,8 +33,8 @@ int main() {
   yakl::init();
   unsigned long slave_fd_float_cnt_start = 0, slave_fd_float_cnt_end = 0;
   {
-    penv_slave_fd_float_sum_init();
-    penv_slave_fd_float_count(&slave_fd_float_cnt_start);
+    // penv_slave_fd_float_sum_init();
+    // penv_slave_fd_float_count(&slave_fd_float_cnt_start);
     asm volatile("nop");
     // SW_BKPT(perf);
     for (size_t n = 6; n < 14; n++) {
@@ -57,7 +57,7 @@ int main() {
         bh(i) = i + 1;
       }
       std::cout << "Initialize finished\n";
-        
+
       std::string format_name = "Serial 1D Kernel " + std::to_string(n);
       for (int i = 0; i < 10; i++) {
         format_name = "Serial 1D Kernel " + std::to_string(n);
@@ -70,8 +70,7 @@ int main() {
         format_name = "parallel_for 1D Kernel " + std::to_string(n);
         yakl::timer_start(format_name.c_str());
         yakl::c::parallel_for(
-            "Compute", yakl::c::Bounds<1>((N - 1) / 8 + 1),
-            YAKL_LAMBDA(int i) { 
+            "Compute", yakl::c::Bounds<1>((N - 1) / 8 + 1), YAKL_LAMBDA(int i) {
               yakl::simd::Pack<double, 8> a_pack, b_pack;
               int i_start = i * 8;
               int i_end = std::min(i_start + 8, N);
@@ -104,7 +103,6 @@ int main() {
                 handler);
           });
 
-
       for (int i = 0; i < N; i++) {
         for (int j = 0; j < M; j++) {
           aah(i, j) = i * N + j;
@@ -123,11 +121,11 @@ int main() {
         yakl::timer_stop(format_name.c_str());
 
         format_name = "parallel_for 2D Kernel " + std::to_string(n);
-        
+
         yakl::timer_start(format_name.c_str());
         yakl::c::parallel_for(
             "Compute 2D", yakl::c::Bounds<2>(N, (M - 1) / 8 + 1),
-            YAKL_LAMBDA(int i, int j) { 
+            YAKL_LAMBDA(int i, int j) {
               int j_start = j * 8;
               int j_end = std::min(j_start + 8, M);
               yakl::simd::Pack<double, 8> a_pack, b_pack;
@@ -154,22 +152,25 @@ int main() {
         yakl::timer_stop(format_name.c_str());
       }
       if (n == 6) {
-        for (int i = 0; i < N; i ++) {
-          for (int j = 0; j < N; j ++) {
+        for (int i = 0; i < N; i++) {
+          for (int j = 0; j < N; j++) {
             if (cch(i, j) != cc(i, j)) {
-              std::cout << "Error at " << i << " " << j << " c = " << cch(i, j) << " " << cc(i, j) << std::endl;
-              std::cout << "Error at " << i << " " << j << " a = " << aah(i, j) << " " << aa(i, j) << std::endl;
-              std::cout << "Error at " << i << " " << j << " b = " << bbh(i, j) << " " << bb(i, j) << std::endl;
+              std::cout << "Error at " << i << " " << j << " c = " << cch(i, j)
+                        << " " << cc(i, j) << std::endl;
+              std::cout << "Error at " << i << " " << j << " a = " << aah(i, j)
+                        << " " << aa(i, j) << std::endl;
+              std::cout << "Error at " << i << " " << j << " b = " << bbh(i, j)
+                        << " " << bb(i, j) << std::endl;
               yakl::finalize();
               return 1;
             }
           }
         }
       }
-
     }
-    penv_slave_fd_float_count(&slave_fd_float_cnt_end);
-    printf("Total Float inst count: %lu\n", slave_fd_float_cnt_end - slave_fd_float_cnt_start);
+    // penv_slave_fd_float_count(&slave_fd_float_cnt_end);
+    printf("Total Float inst count: %lu\n",
+           slave_fd_float_cnt_end - slave_fd_float_cnt_start);
   }
 
   yakl::finalize();

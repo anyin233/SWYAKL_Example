@@ -10,7 +10,7 @@ include_directories(${PROJECT_SOURCE_DIR}/YAKL)
 add_executable(mul main.cpp)
 yakl_process_target(mul)
 
-target_link_libraries(mul ${YAKL_TARGET} -lswperf)
+target_link_libraries(mul ${YAKL_TARGET} )
 target_link_directories(mul PUBLIC /usr/sw/penv/lib)
 target_include_directories(mul PUBLIC /usr/sw/penv/include)
 # target_include_directories()

@@ -10,3 +10,6 @@ build
 bsub.sh
 *.tar.gz
 src/.DS_Store
+
+venv
+test.py
