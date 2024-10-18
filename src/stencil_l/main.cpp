@@ -2,6 +2,7 @@
 
 #include "YAKL.h"
 #include "YAKL_LaunchConfig.h"
+#include "YAKL_defines.h"
 #include "YAKL_parallel_for_c.h"
 #include "YAKL_timers.h"
 #include <iostream>
@@ -19,6 +20,7 @@ using yakl::memDevice;
 using yakl::memHost;
 using yakl::styleC;
 using yakl::c::Bounds;
+using yakl::c::LBnd;
 using yakl::c::parallel_for;
 using yakl::c::parallel_inner;
 using yakl::c::parallel_outer;
@@ -54,6 +56,8 @@ using real = double;
 #define randq25 0.8768136077897237
 #define randq26 0.13218452098797873
 
+#define LDMBLKSZ 1024
+
 int min(int a, int b) {
   if (a > b)
     return b;
@@ -72,6 +76,8 @@ int main(int argc, char **argv) {
 
   yakl::init();
   {
+    LBnd bnd_1_N_1(1, N + 1);
+    LBnd bnd_1_N_1_vec(1, (N - 1) / 8 + 1 + 1);
 
     printf("=========================================\n");
     printf("stencil-2d\n");
@@ -115,10 +121,10 @@ int main(int argc, char **argv) {
 
         yakl::timer_start("stencil-2d-5 hierarchical");
         parallel_outer(
-            Bounds<1>({1, N + 1}),
+            Bounds<1>(bnd_1_N_1),
             YAKL_LAMBDA(int i, yakl::InnerHandler handler) {
               parallel_inner(
-                  Bounds<1>({1, N + 1}),
+                  Bounds<1>(bnd_1_N_1),
                   [&](int j) {
                     b_device2d(i, j) = randq0 * a_device2d(i, j) +
                                        randq1 * a_device2d(i - 1, j) +
@@ -168,9 +174,9 @@ int main(int argc, char **argv) {
 
         yakl::timer_start("stencil-2d-5 hierarchical_simd");
         parallel_outer(
-            Bounds<1>({1, N + 1}), YAKL_LAMBDA(int i, InnerHandler handler) {
+            Bounds<1>(bnd_1_N_1), YAKL_LAMBDA(int i, InnerHandler handler) {
               parallel_inner(
-                  Bounds<1>({1, (N - 1) / 8 + 1 + 1}),
+                  Bounds<1>(bnd_1_N_1_vec),
                   [&](int j) {
                     auto j_start = j * 8 - 8;
                     auto j_end = min(j_start + 8, N + 1);
@@ -250,13 +256,40 @@ int main(int argc, char **argv) {
             yakl::LaunchConfig<512 * 8, false>());
         yakl::timer_stop("stencil-2d-9 kernel");
 
-        int count[64] = {0};
         yakl::timer_start("stencil-2d-9 hierarchical");
-
+#if defined(YAKL_ARCH_SW)
         parallel_outer(
-            Bounds<1>({1, N + 1}), YAKL_LAMBDA(int i, InnerHandler handler) {
+            Bounds<1>(bnd_1_N_1), YAKL_LAMBDA(int i, InnerHandler handler) {
+              SArray<double, 2, 3, LDMBLKSZ + 2> a;
+
+              for (int block = 1; block < N + 1; block += LDMBLKSZ) {
+                int size = std::min(LDMBLKSZ, N - block) + 2;
+                a.fetch_data(0, a_device2d.myData,
+                             (i - 1) * (N + 2) + block - 1, size);
+                a.fetch_data(LDMBLKSZ + 2, a_device2d.myData,
+                             i * (N + 2) + block - 1, size);
+                a.fetch_data(2 * (LDMBLKSZ + 2), a_device2d.myData,
+                             (i + 1) * (N + 2) + block - 1, size);
+                LBnd inner_bound(1, size - 1);
+                parallel_inner(
+                    Bounds<1>(inner_bound),
+                    [&](int j) {
+                      b_device2d(i, j) =
+                          randq0 * a(1, j) + randq1 * a(0, j) +
+                          randq2 * a(2, j) + randq3 * a(1, 0) +
+                          randq4 * a(1, j + 1) + randq5 * a(0, j - 1) +
+                          randq6 * a(0, j + 1) + randq7 * a(2, j - 1) +
+                          randq8 * a(2, j + 1);
+                    },
+                    handler);
+              }
+            });
+#else
+        parallel_outer(
+            Bounds<1>(bnd_1_N_1),
+            YAKL_LAMBDA(int i, InnerHandler handler) {
               parallel_inner(
-                  Bounds<1>({1, N + 1}),
+                  Bounds<1>(bnd_1_N_1),
                   [&](int j) {
                     SArray<double, 2, 3, 3> a;
                     for (int ii = -1; ii <= 1; ii++) {
@@ -270,8 +303,8 @@ int main(int argc, char **argv) {
                         randq6 * a(0, 2) + randq7 * a(2, 0) + randq8 * a(2, 2);
                   },
                   handler);
-            });
-
+            })
+#endif
         yakl::timer_stop("stencil-2d-9 hierarchical");
 
         yakl::timer_start("stencil-2d-9 simd");
@@ -327,12 +360,12 @@ int main(int argc, char **argv) {
 
         yakl::timer_start("stencil-2d-9 hierarchical_simd");
         parallel_outer(
-            Bounds<1>({1, N + 1}), YAKL_LAMBDA(int i, InnerHandler handler) {
+            Bounds<1>(bnd_1_N_1), YAKL_LAMBDA(int i, InnerHandler handler) {
               SArray<yakl::simd::Pack<double, 8>, 2, 3, 3> a_packs;
               SArray<yakl::simd::Pack<double, 8>, 1, 9> rand_packs;
 
               parallel_inner(
-                  Bounds<1>({1, (N - 1) / 8 + 1 + 1}),
+                  Bounds<1>(bnd_1_N_1_vec),
                   [&](int j) {
                     auto j_start = 1 + j * 8;
                     auto j_end = min(N + 1, j_start + 8);
@@ -391,6 +424,8 @@ int main(int argc, char **argv) {
       // b_host3d("b_host3d", N + 2, N + 2, N + 2);
 
       const int N = N_3D;
+      const LBnd bnd_1_N_1(1, N + 1);
+      const LBnd bnd_1_N_1_vec(1, (N - 1) / 8 + 1 + 1);
       {
         real3d_host a_host3d("a_host2d", N + 2, N + 2, N + 2),
             b_host3d("b_host2d", N + 2, N + 2, N + 2);
@@ -445,17 +480,11 @@ int main(int argc, char **argv) {
 
             yakl::timer_start("stencil-3d-7 hierarchical");
             yakl::c::parallel_outer(
-                yakl::c::Bounds<1>({1, N + 1}),
+                yakl::c::Bounds<1>(bnd_1_N_1),
                 YAKL_LAMBDA(int i, yakl::InnerHandler handler) {
                   yakl::c::parallel_inner(
                       Bounds<2>({1, N + 1}, {1, N + 1}),
                       [&](int j, int k) {
-                        yakl::SArray<double, 3, 3, 3, 3> a;
-                        for (int ii = -1; ii <= 1; ii++)
-                          for (int jj = -1; jj <= 1; jj++)
-                            for (int kk = -1; kk <= 1; kk++)
-                              a(ii + 1, jj + 1, kk + 1) =
-                                  a_device3d(i + ii, j + jj, k + kk);
                         b_device3d(i, j, k) = randq0 * a_device3d(i, j, k) +
                                               randq1 * a_device3d(i - 1, j, k) +
                                               randq2 * a_device3d(i + 1, j, k) +
@@ -498,7 +527,7 @@ int main(int argc, char **argv) {
 
             yakl::timer_start("stencil-3d-7 hierarchical_simd");
             yakl::c::parallel_outer(
-                yakl::c::Bounds<1>({1, N + 1}),
+                yakl::c::Bounds<1>(bnd_1_N_1),
                 YAKL_LAMBDA(int i, yakl::InnerHandler handler) {
                   yakl::SArray<yakl::simd::Pack<double, 8>, 1, 7> a_packs;
                   yakl::SArray<yakl::simd::Pack<double, 8>, 1, 8> rand_packs;
@@ -627,7 +656,7 @@ int main(int argc, char **argv) {
 
             yakl::timer_start("stencil-3d-27 hierarchical");
             yakl::c::parallel_outer(
-                yakl::c::Bounds<1>({1, N + 1}),
+                yakl::c::Bounds<1>(bnd_1_N_1),
                 YAKL_LAMBDA(int i, yakl::InnerHandler handler) {
                   yakl::c::parallel_inner(
                       Bounds<2>({1, N + 1}, {1, N + 1}),
@@ -753,7 +782,7 @@ int main(int argc, char **argv) {
 
             yakl::timer_start("stencil-3d-27 hierarical_simd");
             yakl::c::parallel_outer(
-                yakl::c::Bounds<1>({1, N + 1}),
+                yakl::c::Bounds<1>(bnd_1_N_1),
                 YAKL_LAMBDA(int i, yakl::InnerHandler handler) {
                   yakl::SArray<yakl::simd::Pack<double, 8>, 3, 3, 3, 3> a_packs;
                   yakl::SArray<yakl::simd::Pack<double, 8>, 1, 28> rand_packs;
@@ -875,84 +904,87 @@ int main(int argc, char **argv) {
         }
       }
     }
-    { // stencil-1d-3
-      printf("=========================================\n");
-      printf("stencil-1d\n");
-      printf("=========================================\n");
-      const int N_1D = N * N;
-      {
-        real1d_host a_host1d("a_host1d", N_1D + 2),
-            b_host1d("b_host1d", N_1D + 2);
+    // { // stencil-1d-3
+    //   printf("=========================================\n");
+    //   printf("stencil-1d\n");
+    //   printf("=========================================\n");
+    //   const int N_1D = N * N;
+    //   LBnd bnd_1_N_1(1, N_1D + 1);
+    //   LBnd bnd_1_N_1_vec(1, N_1D / 8 + 1);
+    //   {
+    //     real1d_host a_host1d("a_host1d", N_1D + 2),
+    //         b_host1d("b_host1d", N_1D + 2);
 
-        for (int i = 0; i < 20; i++) {
-          yakl::timer_start("stencil-1d-3 serial");
-          for (int i = 1; i < N_1D + 1; i++) {
-            b_host1d(i) = randq0 * a_host1d(i) + randq1 * a_host1d(i - 1) +
-                          randq2 * a_host1d(i + 1);
-          }
-          yakl::timer_stop("stencil-1d-3 serial");
-        }
-      }
+    //     for (int i = 0; i < 20; i++) {
+    //       yakl::timer_start("stencil-1d-3 serial");
+    //       for (int i = 1; i < N_1D + 1; i++) {
+    //         b_host1d(i) = randq0 * a_host1d(i) + randq1 * a_host1d(i - 1) +
+    //                       randq2 * a_host1d(i + 1);
+    //       }
+    //       yakl::timer_stop("stencil-1d-3 serial");
+    //     }
+    //   }
 
-      {
-        real1d_device a_device1d("a_device1d", N_1D + 2),
-            b_device1d("b_device1d", N_1D + 2);
-        for (int i = 0; i < 20; i++) {
-          yakl::timer_start("stencil-1d-3 kernel");
-          yakl::c::parallel_for(
-              yakl::c::Bounds<1>(1, N_1D + 1), YAKL_LAMBDA(int i) {
-                yakl::SArray<double, 1, 3> a;
-                for (int ii = -1; ii <= 1; ii++)
-                  a(ii + 1) = a_device1d(i + ii);
-                b_device1d(i) = randq0 * a(1) + randq1 * a(0) + randq2 * a(2);
-              });
-          yakl::timer_stop("stencil-1d-3 kernel");
-        }
+    //   {
+    //     real1d_device a_device1d("a_device1d", N_1D + 2),
+    //         b_device1d("b_device1d", N_1D + 2);
+    //     for (int i = 0; i < 20; i++) {
+    //       yakl::timer_start("stencil-1d-3 kernel");
+    //       yakl::c::parallel_for(
+    //           yakl::c::Bounds<1>(bnd_1_N_1), YAKL_LAMBDA(int i) {
+    //             yakl::SArray<double, 1, 3> a;
+    //             for (int ii = -1; ii <= 1; ii++)
+    //               a(ii + 1) = a_device1d(i + ii);
+    //             b_device1d(i) = randq0 * a(1) + randq1 * a(0) + randq2 *
+    //             a(2);
+    //           });
+    //       yakl::timer_stop("stencil-1d-3 kernel");
+    //     }
 
-        // stencil-1d-3-simd
-        // real1d_device a_device1d("a_device1d", N + 2),
-        // b_device1d("b_device1d", N + 2);
-        yakl::c::parallel_for(
-            yakl::c::Bounds<1>(1, N_1D + 1), YAKL_LAMBDA(int i) {
-              a_device1d(i) = (double)rand();
-              b_device1d(i) = 0.0;
-            });
-        for (int i = 0; i < 20; i++) {
-          yakl::timer_start("stencil-1d-3 simd");
-          yakl::c::parallel_for(
-              yakl::c::Bounds<1>(1, N_1D / 8 + 1), YAKL_LAMBDA(int i) {
-                yakl::SArray<yakl::simd::Pack<double, 8>, 1, 3> a;
-                // yakl::SArray<yakl::simd::Pack<double, 8>, 1, 3> b;
-                yakl::SArray<yakl::simd::Pack<double, 8>, 1, 3> s_vals;
+    //     // stencil-1d-3-simd
+    //     // real1d_device a_device1d("a_device1d", N + 2),
+    //     // b_device1d("b_device1d", N + 2);
+    //     yakl::c::parallel_for(
+    //         yakl::c::Bounds<1>(1, N_1D + 1), YAKL_LAMBDA(int i) {
+    //           a_device1d(i) = (double)rand();
+    //           b_device1d(i) = 0.0;
+    //         });
+    //     for (int i = 0; i < 20; i++) {
+    //       yakl::timer_start("stencil-1d-3 simd");
+    //       yakl::c::parallel_for(
+    //           yakl::c::Bounds<1>(bnd_1_N_1_vec), YAKL_LAMBDA(int i) {
+    //             yakl::SArray<yakl::simd::Pack<double, 8>, 1, 3> a;
+    //             // yakl::SArray<yakl::simd::Pack<double, 8>, 1, 3> b;
+    //             yakl::SArray<yakl::simd::Pack<double, 8>, 1, 3> s_vals;
 
-                auto i_start = i * 8;
-                auto i_end = min(N_1D, i_start + 8);
-                for (auto vi = 0; vi < 8 && vi + i_start < i_end; vi++) {
-                  auto real_i = vi + i_start;
-                  for (int ii = -1; ii <= 1; ii++) {
-                    a(ii + 1)(vi) = a_device1d(real_i + ii);
-                  }
-                  s_vals(0)(vi) = randq0;
-                  s_vals(1)(vi) = randq1;
-                  s_vals(2)(vi) = randq2;
-                }
+    //             auto i_start = i * 8;
+    //             auto i_end = min(N_1D, i_start + 8);
+    //             for (auto vi = 0; vi < 8 && vi + i_start < i_end; vi++) {
+    //               auto real_i = vi + i_start;
+    //               for (int ii = -1; ii <= 1; ii++) {
+    //                 a(ii + 1)(vi) = a_device1d(real_i + ii);
+    //               }
+    //               s_vals(0)(vi) = randq0;
+    //               s_vals(1)(vi) = randq1;
+    //               s_vals(2)(vi) = randq2;
+    //             }
 
-                s_vals(0) *= a(1);
-                s_vals(1) *= a(0);
-                s_vals(2) *= a(2);
-                s_vals(2) += s_vals(1);
-                s_vals(2) += s_vals(0);
+    //             s_vals(0) *= a(1);
+    //             s_vals(1) *= a(0);
+    //             s_vals(2) *= a(2);
+    //             s_vals(2) += s_vals(1);
+    //             s_vals(2) += s_vals(0);
 
-                yakl::simd::iterate_over_pack(
-                    [&](unsigned int ilane) {
-                      b_device1d(i * 8 + ilane) = s_vals(i)(ilane);
-                    },
-                    yakl::simd::PackIterConfig<8, false>());
-              });
-          yakl::timer_stop("stencil-1d-3 simd");
-        }
-      }
-    }
+    //             yakl::simd::iterate_over_pack(
+    //                 [&](unsigned int ilane) {
+    //                   b_device1d(i * 8 + ilane) = s_vals(i)(ilane);
+    //                 },
+    //                 yakl::simd::PackIterConfig<8, false>());
+    //           });
+    //       yakl::timer_stop("stencil-1d-3 simd");
+    //     }
+    //   }
+    // }
     // heat-2d
     {
       printf("=========================================\n");
